@@ -432,12 +432,57 @@
 
   <footer>
     <p class="footer-para">@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | <span
-        class="mobile-number">855-335-2255</span></p>
+        class="mobile-number">855-335-2255 | *</span></p>
 
   </footer>
 
   <script defer>
     alert("Javsacript is running");
+      // Get the icon and text elements
+      var icon = document.querySelector(".icon-inner");
+      var text = document.querySelector(".text-header");
+
+      // Get the dropdown content
+      var dropdownContent = document.getElementById("languageDropdown");
+
+      // Add click event listeners to the icon and text
+      icon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+      });
+
+      text.addEventListener("click", function (event) {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+      });
+
+      // Close the dropdown when clicking outside of it
+      document.addEventListener("click", function (event) {
+        if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+
+      const submitBtnEle = document.getElementById('next');
+      if (submitBtnEle && submitBtnEle != undefined) {
+        document.getElementById('next').textContent = 'LOG IN';
+      }
+
+      var showIcon = document.getElementById("showPasswordIcon");
+      var hideIcon = document.getElementById("hidePasswordIcon");
+      var passwordInput = document.getElementById("password");
+
+      hideIcon.addEventListener("click", function () {
+        passwordInput.type = "text";
+        hideIcon.style.display = "none";
+        showIcon.style.display = "block";
+      });
+
+      showIcon.addEventListener("click", function () {
+        passwordInput.type = "password";
+        showIcon.style.display = "none";
+        hideIcon.style.display = "block";
+      });
   </script>
 
 </body>
