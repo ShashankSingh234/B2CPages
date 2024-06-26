@@ -317,7 +317,7 @@
     #forgotPassword {
       position: absolute;
       margin-top: 40px;
-      margin-left: 160px;
+      margin-left: 185px;
       color: #003057;
       font-size: 14px;
       font-weight: 700;
@@ -466,7 +466,12 @@
 
       const submitBtnEle = document.getElementById('next');
       if (submitBtnEle && submitBtnEle != undefined) {
-        document.getElementById('next').textContent = 'LOG IN';
+        submitBtnEle.textContent = 'LOG IN';
+      }
+
+      const forgotPasswordEle = document.getElementById('forgotPassword');
+      if (forgotPasswordEle && forgotPasswordEle != undefined) {
+        forgotPasswordEle.textContent = "Forgot password?"
       }
     })();
 
