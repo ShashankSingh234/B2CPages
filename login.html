@@ -150,10 +150,6 @@
 
     }
 
-    .image-coBrand {
-      padding-left: 4px;
-    }
-
     @media only screen and (max-width: 600px) {
       .image-coBrand {
         padding-left: 85px;
@@ -349,12 +345,17 @@
         color: red;
       }
     }
+
+    #client-logo {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="topnav">
+    <img class="image-coBrand" id="client-logo" width="135" height="35">
     <img class="image" src="https://www.dialcare.com/images/DialCare%20Telemedicine%20Simplified%20Logo.png" width="135"
       height="30">
 
@@ -493,6 +494,23 @@
       });
     })();
 
+    (async () => {
+      const clientUrls = await (await fetch('clientUrls.json')).json();
+      if (clientUrls?.length) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const redirectURL = urlParams.get('redirect_uri') || '';
+        const client = clientUrls.find((client) => client.url == redirectURL);
+        if (client) {
+          const clientLogoEle = document.getElementById('client-logo');
+          if (clientLogoEle && clientLogoEle != undefined) {
+            const { logo } = client;
+            clientLogoEle.style.display = 'unset';
+            clientLogoEle.src = logo;
+          }
+        }
+      }
+    })();
   </script>
 
 </body>
