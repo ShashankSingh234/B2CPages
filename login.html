@@ -495,7 +495,7 @@
     })();
 
     (async () => {
-      const clientUrls = await (await fetch('clientUrls.json')).json();
+      const clientUrls = await (await fetch('https://shashanksingh234.github.io/B2CPages/clientUrls.json')).json();
       if (clientUrls?.length) {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
