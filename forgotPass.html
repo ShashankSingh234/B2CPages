@@ -364,6 +364,13 @@
     .buttons{
       text-align: center;
     }
+    #codeExpireText{
+      color: #4B4B4B;
+      font-size: 19px;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 0px;
+    }
   </style>
 </head>
 
@@ -588,7 +595,14 @@
           const emailVerificationControl_but_send_new_code_ele = document.getElementById('emailVerificationControl_but_send_new_code');
           emailVerificationControl_but_send_new_code_ele.textContent = 'Resend';
           emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(codeNotReceivedText,emailVerificationControl_but_send_new_code_ele);
-            clearInterval(emailShowInterval);
+
+          let codeExpireTextEle = document.createElement('p');
+          codeExpireTextEle.id = 'codeExpireText';
+          codeExpireTextEle.textContent = 'This code will expire in 10 minutes.';
+          const VerificationCodeEle = document.getElementById('VerificationCode');
+          VerificationCodeEle.insertAdjacentElement('afterend', codeExpireTextEle);
+
+          clearInterval(emailShowInterval);
         }
       });
     })();
