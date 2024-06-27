@@ -345,6 +345,25 @@
         padding-top: 30px;
         padding-bottom: 30px;
     }
+    #emailVerificationControl_but_send_new_code{
+      display: block;
+      background: transparent;
+      border: none;
+      color: #003057;
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: underline solid;
+      width: auto;
+    }
+    #codeNotReceivedText{
+      font-size: 20px;
+      font-weight: 400;
+      color: #4B4B4B;
+      text-align: center;
+    }
+    .buttons{
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -557,17 +576,19 @@
         forgotPasswordEle.textContent = "Forgot password?"
       }
 
-
-
-
       let emailShowInterval = setInterval(() => {
         if(!isElementWithClassDisplayNone('VerificationCode')){
           document.getElementById('email').style.display = 'none';
           document.getElementById('email_label').style.display = 'none';
           document.getElementsByClassName('forgotpassword')[0].style.display = 'none';
           document.getElementsByClassName('registeredemail')[0].style.display = 'none';
+          let codeNotReceivedText = document.createElement('span');
+          codeNotReceivedText.textContent = 'Code Not Received?';
+          codeNotReceivedText.id = 'codeNotReceivedText';
+          const emailVerificationControl_but_send_new_code_ele = document.getElementById('emailVerificationControl_but_send_new_code');
+          emailVerificationControl_but_send_new_code_ele.textContent = 'Resend';
+          emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(codeNotReceivedText,emailVerificationControl_but_send_new_code_ele);
             clearInterval(emailShowInterval);
-            console.log("interval");
         }
       });
     })();
