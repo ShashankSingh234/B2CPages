@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       background-color: #f9f9f9;
     }
 
@@ -18,7 +18,7 @@
       border: 1px solid transparent;
       /* Remove border color */
       margin-top: 0px;
-      box-shadow: 0 0 4px #00000040
+      box-shadow: 0 0 4px #00000040;
     }
 
     .card {
@@ -47,8 +47,8 @@
 
     @media screen and (max-width: 600px) {
       .footer-para {
-        font-size: 16px
-          /* Adjusted width for smaller screens */
+        font-size: 16px;
+        /* Adjusted width for smaller screens */
       }
     }
 
@@ -58,20 +58,9 @@
       /* margin-top:20px; */
     }
 
-
-
-
-
-
     .image {
       padding-left: 10px;
       padding-top: 10px;
-
-    }
-
-
-    .image-coBrand {
-      padding-left: 4px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -83,7 +72,7 @@
     .telemedicine {
       letter-spacing: 14px;
       text-align: center;
-      color: #00AEA9;
+      color: #00aea9;
       font-weight: 700;
       padding-top: 60px;
       font-size: 19px;
@@ -110,10 +99,8 @@
       color: #00aea9;
       letter-spacing: 8px;
       word-spacing: 10px;
-      /* font-weight: bolder; */
       text-align: center;
-
-      padding-top: 114px;
+      padding-top: 30px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -122,7 +109,7 @@
         padding-bottom: 0px;
         margin-bottom: 0px;
         /* Margin-top for mobile screens */
-        background-color: #E4E4E4;
+        background-color: #e4e4e4;
       }
     }
 
@@ -132,7 +119,6 @@
         /* Set position relative for the container */
         top: 65px;
       }
-
     }
 
     @media only screen and (max-width: 600px) {
@@ -166,7 +152,6 @@
 
       z-index: 1;
       right: 0;
-
     }
 
     .dropdown-content a {
@@ -178,8 +163,6 @@
       line-height: 12px;
       border-radius: 6px;
       width: 112px;
-
-
     }
 
     .dropdown-item:last-child {
@@ -193,7 +176,6 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 8px;
     }
-
 
     .show {
       display: block;
@@ -214,8 +196,7 @@
 
       bottom: 4px;
       right: 0px;
-      color: #4B4B4B;
-
+      color: #4b4b4b;
     }
 
     @media only screen and (max-width: 600px) {
@@ -283,14 +264,13 @@
     }
 
     input[type="text"]:focus {
-      border-color: #007DA5;
+      border-color: #007da5;
       /* Change border color when input is focused */
       outline: none;
       /* Remove default outline */
-      box-shadow: 0 0 0 1px #007DA5;
+      box-shadow: 0 0 0 1px #007da5;
       /* Add a blue shadow to mimic outline */
     }
-
 
     .back-button {
       display: flex;
@@ -302,7 +282,7 @@
     .back-button button {
       display: flex;
       align-items: center;
-      color: #4B4B4B;
+      color: #4b4b4b;
       border: none;
       padding: 8px 8px;
       cursor: pointer;
@@ -343,7 +323,7 @@
     }
 
     label {
-      color: #4B4B4B;
+      color: #4b4b4b;
       font-size: 16px;
       font-weight: 700;
     }
@@ -351,13 +331,28 @@
     .error {
       color: red;
     }
+
+    #client-logo {
+      display: none;
+    }
+
+    #VerificationCode_label {
+        color: #4B4B4B;
+        font-size: 20px;
+        font-weight: 700;
+        height: 23px;
+        width: 344px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
   </style>
 </head>
 
 <body>
   <div class="topnav">
+    <img class="image-coBrand" id="client-logo" width="135" height="35" />
     <img class="image" src="https://www.dialcare.com/images/DialCare%20Telemedicine%20Simplified%20Logo.png" width="135"
-      height="30">
+      height="30" />
 
     <div class="language-selector" id="languageSelector">
       <div>
@@ -370,7 +365,7 @@
           </svg>
           <span class="text-header">English</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="s-ion-icon" style="position: relative; top: 2px; cursor: pointer;">
+            class="s-ion-icon" style="position: relative; top: 2px; cursor: pointer">
             <path d="M5 7L10 12L15 7" stroke="#4B4B4B" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
@@ -378,7 +373,11 @@
       </div>
       <div class="dropdown-content" id="languageDropdown">
         <div class="card-2">
-          <a href="#" style="background-color: #003057;color: white;margin-bottom: 7px;">English</a>
+          <a href="#" style="
+                background-color: #003057;
+                color: white;
+                margin-bottom: 7px;
+              ">English</a>
           <a href="#">Spanish</a>
         </div>
       </div>
@@ -395,26 +394,134 @@
     </button>
   </span>
 
-
   <div class="card">
     <p class="forgotpassword">Forgot Your Password?</p>
-    <p class="registeredemail">Don't worry, it happens!<br>Please enter registered email.</p>
+    <p class="registeredemail">
+      Don't worry, it happens!<br />Please enter registered email.
+    </p>
     <div id="api" data-name="SelfAsserted" role="main">
+      <div class="heading">
+        <h1 role="heading">User Details</h1>
+      </div>
+      <div class="buttons"></div>
+      <div class="intro">
+        <p>Please provide the following details.</p>
+      </div>
+      <form id="attributeVerification" action="JavaScript:void(0);">
+        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none" aria-hidden="true">
+          The password entry fields do not match. Please enter the same
+          password in both fields and try again.
+        </div>
+        <div id="requiredFieldMissing" class="error pageLevel" style="display: none" aria-hidden="true">
+          A required field is missing. Please fill out all required fields and
+          try again.
+        </div>
+        <div id="fieldIncorrect" class="error pageLevel" style="display: none" aria-hidden="true">
+          One or more fields are filled out incorrectly. Please check your
+          entries and try again.
+        </div>
+        <div id="claimVerificationServerError" class="error pageLevel" style="display: none" aria-hidden="true"></div>
+        <div id="attributeList" class="attr">
+          <ul>
+            <li class="VerificationControl emailVerificationControl_li">
+              <div class="attrEntry">
+                <label id="emailVerificationControl_label" for="emailVerificationControl"></label>
+                <div class="error itemLevel" role="alert"></div>
+                <div class="verificationControlContent" id="emailVerificationControl">
+                  <div class="verificationInfoText">
+                    <div id="emailVerificationControl_info_message" aria-hidden="true" role="alert"
+                      aria-label="Verification is necessary. Please click Send button." style="display: none">
+                      Verification is necessary. Please click Send button.
+                    </div>
+                  </div>
+                  <div class="verificationSuccessText">
+                    <div id="emailVerificationControl_success_message" aria-hidden="false" role="alert"
+                      aria-label="Verification code has been sent. Please copy it to the input box below."
+                      style="display: inline">
+                      Verification code has been sent. Please copy it to the
+                      input box below.
+                    </div>
+                  </div>
+                  <div class="verificationErrorText error">
+                    <div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label=""
+                      style="display: none"></div>
+                  </div>
+                  <ul>
+                    <li class="TextBox email_li email" aria-hidden="false" style="display: inline">
+                      <div class="attrEntry">
+                        <label id="email_label" for="email">Email Address</label>
+                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div>
+                        <input id="email" class="textInput" type="text" placeholder="Email Address"
+                          aria-label="Email Address"
+                          pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                          title="Email address that can be used to contact you." aria-required="true"
+                          autofocus="autofocus" /><a class="helpLink tiny" href="javascript:void(0)"
+                          data-help="Email address that can be used to contact you.">What is this?</a>
+                      </div>
+                    </li>
+                    <li class="TextBox VerificationCode_li VerificationCode" aria-hidden="false"
+                      style="display: inline">
+                      <div class="attrEntry">
+                        <label id="VerificationCode_label" for="VerificationCode">Verification Code</label>
+                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div>
+                        <input id="VerificationCode" class="textInput" type="text" placeholder="Verification Code"
+                          aria-label="Verification Code" title="Enter your email verification code" aria-required="true"
+                          autocomplete="off" /><a class="helpLink tiny" href="javascript:void(0)"
+                          data-help="Enter your email verification code">What is this?</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="working" style="display: none" aria-hidden="true"></div>
+                  <div class="buttons">
+                    <button class="sendCode" id="emailVerificationControl_but_send_code" type="button"
+                      aria-label="Send verification code" aria-hidden="true" style="display: none">
+                      Send verification code</button><button class="verifyCode"
+                      id="emailVerificationControl_but_verify_code" type="button" aria-label="Verify code"
+                      aria-hidden="false" style="display: inline">
+                      Verify code</button><button class="sendNewCode" id="emailVerificationControl_but_send_new_code"
+                      type="button" aria-label="Send new code" aria-hidden="false" style="display: inline">
+                      Send new code</button><button class="changeClaims" id="emailVerificationControl_but_change_claims"
+                      type="button" aria-label="Change Email Address" aria-hidden="true" style="display: none">
+                      Change
+                    </button>
+                  </div>
+                </div>
+                <a class="helpLink tiny" href="javascript:void(0)">What is this?</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue">
+            Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">
+            Cancel
+          </button>
+        </div>
+
+        <div class="verifying-modal">
+          <div id="verifying_blurb"></div>
+        </div>
+      </form>
     </div>
     <div>
       <h1 class="custom-letter-spacing">TELEMEDICINE SIMPLIFIED</h1>
     </div>
-
   </div>
 
   <footer>
-    <p class="footer-para">@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | <span
-        class="mobile-number">855-335-2255</span></p>
-
+    <p class="footer-para">
+      @2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and
+      Conditions | <span class="mobile-number">855-335-2255</span>
+    </p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
+  <script async>
+    function isElementWithClassDisplayNone(className) {
+      const element = document.querySelector(`.${className}`);
+      return element && window.getComputedStyle(element).display === 'none';
+    }
+
+    (() => {
       // Get the icon and text elements
       var icon = document.querySelector(".icon-inner");
       var text = document.querySelector(".text-header");
@@ -440,16 +547,49 @@
         }
       });
 
-      var emailLabel = document.getElementById('email_label');
-      if (emailLabel && emailLabel != undefined) {
-        emailLabel.textContent = 'Email';
+      const submitBtnEle = document.getElementById('next');
+      if (submitBtnEle && submitBtnEle != undefined) {
+        submitBtnEle.textContent = 'LOG IN';
       }
 
-      var sendVerificationCodeBtn = document.getElementById('email_ver_but_send');
-      if (sendVerificationCodeBtn && sendVerificationCodeBtn != undefined) {
-        sendVerificationCodeBtn.textContent = 'SEND CODE';
+      const forgotPasswordEle = document.getElementById('forgotPassword');
+      if (forgotPasswordEle && forgotPasswordEle != undefined) {
+        forgotPasswordEle.textContent = "Forgot password?"
       }
-    });
+
+
+
+
+      let emailShowInterval = setInterval(() => {
+        if(!isElementWithClassDisplayNone('VerificationCode')){
+          document.getElementById('email').style.display = 'none';
+          document.getElementById('email_label').style.display = 'none';
+          document.getElementsByClassName('forgotpassword')[0].style.display = 'none';
+          document.getElementsByClassName('registeredemail')[0].style.display = 'none';
+            clearInterval(emailShowInterval);
+            console.log("interval");
+        }
+      });
+    })();
+
+    (async () => {
+      const clientUrls = await (await fetch('https://shashanksingh234.github.io/B2CPages/clientUrls.json')).json();
+      if (clientUrls?.length) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const redirectURL = urlParams.get('redirect_uri') || '';
+        const client = clientUrls.find((client) => client.url == redirectURL);
+        if (client) {
+          const clientLogoEle = document.getElementById('client-logo');
+          if (clientLogoEle && clientLogoEle != undefined) {
+            const { logo } = client;
+            clientLogoEle.style.display = 'unset';
+            clientLogoEle.src = logo;
+          }
+        }
+      }
+    })();
   </script>
 </body>
+
 </html>
