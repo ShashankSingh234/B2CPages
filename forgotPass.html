@@ -594,7 +594,7 @@
         }
       });
       const resetPasswordInterval = setInterval(() => {
-        if (!isElementWithClassDisplayNone('reenterPassword_li')) {
+        if (isElementWithClassDisplayNone('reenterPassword_li') == false) {
           const forgotpasswordEle = document.getElementsByClassName('forgotpassword');
           forgotpasswordEle[0].textContent = 'Reset Password';
           const registeredemailEle = document.getElementsByClassName('registeredemail');
