@@ -344,16 +344,15 @@
     }
 
     #VerificationCode_label {
-      color: #4B4B4B;
-      font-size: 20px;
-      font-weight: 700;
-      height: 23px;
-      width: 344px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+        color: #4B4B4B;
+        font-size: 20px;
+        font-weight: 700;
+        height: 23px;
+        width: 344px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
-
-    #emailVerificationControl_but_send_new_code {
+    #emailVerificationControl_but_send_new_code{
       display: block;
       background: transparent;
       border: none;
@@ -363,34 +362,30 @@
       text-decoration: underline solid;
       width: auto;
     }
-
-    #codeNotReceivedText {
+    #codeNotReceivedText{
       font-size: 20px;
       font-weight: 400;
       color: #4B4B4B;
       text-align: center;
     }
-
-    .buttons {
+    .buttons{
       text-align: center;
     }
-
-    #codeExpireText {
+    #codeExpireText{
       color: #4B4B4B;
       font-size: 19px;
       font-weight: 400;
       font-style: italic;
       margin-top: 0px;
     }
-
     input[type="password"] {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      border: 1px solid #717271;
-      transition: border-color 0.3s;
-      border-radius: 4px;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #717271;
+        transition: border-color 0.3s;
+        border-radius: 4px;
     }
   </style>
 </head>
@@ -450,54 +445,32 @@
       <div class="heading">
         <h1 role="heading">User Details</h1>
       </div>
-      <div class="buttons">
-      </div>
-      <div class="intro">
-        <p>Please provide the following details.</p>
-      </div>
-      <form id="attributeVerification" action="JavaScript:void(0);">
-        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password
-          entry fields do not match. Please enter the same password in both fields and try again.</div>
-        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required
-          field is missing. Please fill out all required fields and try again.</div>
-        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields
-          are filled out incorrectly. Please check your entries and try again.</div>
+    <div class="buttons">
+    </div>
+    <div class="intro">
+      <p>Please provide the following details.</p>
+    </div>
+    <form id="attributeVerification" action="JavaScript:void(0);">
+        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div>
+        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div>
+        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div>
         <div id="claimVerificationServerError" class="error pageLevel" style="display: none;" aria-hidden="true"></div>
         <div id="attributeList" class="attr">
-          <ul>
-            <li class="Password newPassword_li">
-              <div class="attrEntry"><label id="newPassword_label" for="newPassword">New Password</label>
-                <div class="error itemLevel" role="alert"></div><input id="newPassword" class="textInput"
-                  type="password" placeholder="New Password" aria-label="New Password"
-                  pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
-                  title="Enter new password" autocomplete="new-password" aria-required="true" autofocus="autofocus"><a
-                  class="helpLink tiny" href="javascript:void(0)" data-help="Enter new password">What is this?</a>
-              </div>
-            </li>
-            <li class="Password reenterPassword_li">
-              <div class="attrEntry"><label id="reenterPassword_label" for="reenterPassword">Confirm New
-                  Password</label>
-                <div class="error itemLevel" role="alert"></div><input id="reenterPassword" class="textInput"
-                  type="password" placeholder="Confirm New Password" aria-label="Confirm New Password"
-                  pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
-                  title="Confirm new password" autocomplete="new-password" aria-required="true"><a class="helpLink tiny"
-                  href="javascript:void(0)" data-help="Confirm new password">What is this?</a>
-              </div>
-            </li>
-          </ul>
+            <ul>
+                <li class="Password newPassword_li"><div class="attrEntry"><label id="newPassword_label" for="newPassword">New Password</label><div class="error itemLevel" role="alert"></div><input id="newPassword" class="textInput" type="password" placeholder="New Password" aria-label="New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title="Enter new password" autocomplete="new-password" aria-required="true" autofocus="autofocus"><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter new password">What is this?</a></div></li>
+                <li class="Password reenterPassword_li"><div class="attrEntry"><label id="reenterPassword_label" for="reenterPassword">Confirm New Password</label><div class="error itemLevel" role="alert"></div><input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password" aria-label="Confirm New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title="Confirm new password" autocomplete="new-password" aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Confirm new password">What is this?</a></div></li>
+            </ul>
         </div>
         <div class="buttons">
-          <button id="continue" type="submit" form="attributeVerification" aria-disabled="false"
-            aria-label="Continue">Continue</button><button id="cancel" aria-label="Cancel"
-            formnovalidate="">Cancel</button>
+            <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue">Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
         </div>
 
         <div class="verifying-modal">
-          <div id="verifying_blurb"></div>
+            <div id="verifying_blurb"></div>
         </div>
-      </form>
-
-    </div>
+    </form>
+    
+  </div>
     <div>
       <h1 class="custom-letter-spacing">TELEMEDICINE SIMPLIFIED</h1>
     </div>
@@ -553,7 +526,7 @@
       }
 
       let emailShowInterval = setInterval(() => {
-        if (!isElementWithClassDisplayNone('VerificationCode') && isElementWithClassDisplayNone('reenterPassword_li')) {
+        if(!isElementWithClassDisplayNone('VerificationCode')){
           document.getElementById('email').style.display = 'none';
           document.getElementById('email_label').style.display = 'none';
           document.getElementsByClassName('forgotpassword')[0].style.display = 'none';
@@ -563,7 +536,7 @@
           codeNotReceivedText.id = 'codeNotReceivedText';
           const emailVerificationControl_but_send_new_code_ele = document.getElementById('emailVerificationControl_but_send_new_code');
           emailVerificationControl_but_send_new_code_ele.textContent = 'Resend';
-          emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(codeNotReceivedText, emailVerificationControl_but_send_new_code_ele);
+          emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(codeNotReceivedText,emailVerificationControl_but_send_new_code_ele);
 
           let codeExpireTextEle = document.createElement('p');
           codeExpireTextEle.id = 'codeExpireText';
@@ -581,32 +554,17 @@
             continueBtnEle.style.display = 'unset';
 
             const changeClaimsInterval = setInterval(() => {
-              if (!isElementWithClassDisplayNone('changeClaims')) {
+              if(!isElementWithClassDisplayNone('changeClaims')){
                 const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
-                emailVerificationControl_but_change_claims_ele.style.display = 'none';
+                emailVerificationControl_but_change_claims_ele.style.display = 'none';              
                 clearInterval(changeClaimsInterval);
               }
             });
           }
 
           clearInterval(emailShowInterval);
-
         }
       });
-      // const resetPasswordInterval = setInterval(() => {
-      //   if (isElementWithClassDisplayNone('reenterPassword_li') == false) {
-      //     const forgotpasswordEle = document.getElementsByClassName('forgotpassword');
-      //     forgotpasswordEle[0].textContent = 'Reset Password';
-      //     const registeredemailEle = document.getElementsByClassName('registeredemail');
-      //     registeredemailEle[0].style.display = 'none';
-
-      //     const continueBtnEle = document.getElementById('continue');
-      //       continueBtnEle.style.display = 'unset';
-      //       continueBtnEle.style.marginTop = 'unset';
-      //       continueBtnEle.textContent = 'RESET PASSWORD';
-      //     clearInterval(resetPasswordInterval);
-      //   }
-      // });
     })();
 
     (async () => {
