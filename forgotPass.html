@@ -616,10 +616,14 @@
             codeNotReceivedText.style.display = 'none';
             const continueBtnEle = document.getElementById('continue');
             continueBtnEle.style.display = 'unset';
-            setTimeout(() => {
-              const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
-              emailVerificationControl_but_change_claims_ele.style.display = 'none';              
-            }, 100);
+
+            const changeClaimsInterval = setInterval(() => {
+              if(!isElementWithClassDisplayNone('changeClaims')){
+                const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
+                emailVerificationControl_but_change_claims_ele.style.display = 'none';              
+                clearInterval(changeClaimsInterval);
+              }
+            });
           }
 
           clearInterval(emailShowInterval);
