@@ -100,7 +100,7 @@
       letter-spacing: 8px;
       word-spacing: 10px;
       text-align: center;
-      padding-top: 30px;
+      padding-top: 80px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -305,6 +305,7 @@
       }
     }
 
+    .verificationSuccessText,
     .heading,
     .intro,
     .verificationInfoText,
@@ -602,6 +603,8 @@
           const VerificationCodeEle = document.getElementById('VerificationCode');
           VerificationCodeEle.insertAdjacentElement('afterend', codeExpireTextEle);
 
+          const emailVerificationControl_but_verify_code_ele = document.getElementById('emailVerificationControl_but_verify_code');
+          emailVerificationControl_but_verify_code_ele.textContent = 'VERIFY';
           clearInterval(emailShowInterval);
         }
       });
