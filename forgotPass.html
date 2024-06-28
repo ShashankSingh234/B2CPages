@@ -305,12 +305,13 @@
       }
     }
 
+    #continue,
     .verificationSuccessText,
     .heading,
     .intro,
     .verificationInfoText,
     .helpLink,
-    #continue,
+    #email_ver_but_edit,
     #cancel {
       display: none !important;
     }
@@ -605,6 +606,14 @@
 
           const emailVerificationControl_but_verify_code_ele = document.getElementById('emailVerificationControl_but_verify_code');
           emailVerificationControl_but_verify_code_ele.textContent = 'VERIFY';
+          emailVerificationControl_but_verify_code_ele.addEventListener("click", hideCodeNotReceivedText);
+
+          function hideCodeNotReceivedText() {
+            alert("Button Clicked!");
+            codeNotReceivedText.style.display = 'none';
+            const continueBtnEle = document.getElementById('continue');
+            continueBtnEle.style.display = 'unset';
+          }
           clearInterval(emailShowInterval);
         }
       });
