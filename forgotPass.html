@@ -616,8 +616,10 @@
             codeNotReceivedText.style.display = 'none';
             const continueBtnEle = document.getElementById('continue');
             continueBtnEle.style.display = 'unset';
-            const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
-            emailVerificationControl_but_change_claims_ele.style.display = 'none';
+            setTimeout(() => {
+              const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
+              emailVerificationControl_but_change_claims_ele.style.display = 'none';              
+            }, 100);
           }
 
           clearInterval(emailShowInterval);
