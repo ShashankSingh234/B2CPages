@@ -410,6 +410,7 @@
     }
 
     #newPasswordIcon,#confirmPasswordIcon {
+      display: none;
       svg{
         position: absolute;
         transform: translateY(-50%);
@@ -741,6 +742,11 @@
               "afterend",
               passwordInstrunctionEle
             );
+
+            const newPasswordIconEle = document.getElementById('newPasswordIcon');
+            newPasswordIconEle.style.display = 'unset';
+            const confirmPasswordIconEle = document.getElementById('confirmPasswordIcon');
+            confirmPasswordIconEle.style.display = 'unset';
           clearInterval(resetPasswordInterval);
         }
       });
