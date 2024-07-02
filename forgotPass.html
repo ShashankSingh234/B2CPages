@@ -344,15 +344,16 @@
     }
 
     #VerificationCode_label {
-        color: #4B4B4B;
-        font-size: 20px;
-        font-weight: 700;
-        height: 23px;
-        width: 344px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+      color: #4b4b4b;
+      font-size: 20px;
+      font-weight: 700;
+      height: 23px;
+      width: 344px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
-    #emailVerificationControl_but_send_new_code{
+
+    #emailVerificationControl_but_send_new_code {
       display: block;
       background: transparent;
       border: none;
@@ -362,31 +363,81 @@
       text-decoration: underline solid;
       width: auto;
     }
-    #codeNotReceivedText{
+
+    #codeNotReceivedText {
       font-size: 20px;
       font-weight: 400;
-      color: #4B4B4B;
+      color: #4b4b4b;
       text-align: center;
     }
-    .buttons{
+
+    .buttons {
       text-align: center;
     }
-    #codeExpireText{
-      color: #4B4B4B;
+
+    #codeExpireText {
+      color: #4b4b4b;
       font-size: 19px;
       font-weight: 400;
       font-style: italic;
       margin-top: 0px;
     }
-    input[type="password"] {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        box-sizing: border-box;
-        border: 1px solid #717271;
-        transition: border-color 0.3s;
-        border-radius: 4px;
+
+    #passswordInstruction {
+      li {
+        list-style-type: disc !important;
+      }
+
+      padding-left: 17px !important;
+      font-size: 13px;
+      font-style: italic;
+      padding-bottom: 15px;
+      padding-top: 15px;
     }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #717271;
+      transition: border-color 0.3s;
+      border-radius: 4px;
+    }
+    
+    .attrEntry{
+      position: relative;
+    }
+
+    #newPasswordIcon,#confirmPasswordIcon {
+      svg{
+        position: absolute;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #4b4b4b;
+        margin-left: 370px;
+        z-index: 1;
+      }
+    }
+
+    #newPasswordIcon {
+      svg {
+        margin-top: 40px;
+      }
+      #hideNewPasswordIcon{
+        display: none;;
+      }
+    }
+
+    #confirmPasswordIcon {
+      svg {
+        margin-top: 200px;
+      }
+      #hideConfirmPasswordIcon{
+        display: none;
+      }
+    }
+    
   </style>
 </head>
 
@@ -441,36 +492,99 @@
     <p class="registeredemail">
       Don't worry, it happens!<br />Please enter registered email.
     </p>
+
+    <div id="newPasswordIcon">
+      <svg id="showNewPasswordIcon" xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 24 24"
+        fill="none">
+
+        <path fill="currentColor"
+          d="M8.073 12.194L4.212 8.333c-1.52 1.657-2.096 3.317-2.106 3.351L2 12l.105.316C2.127 12.383 4.421 19 12.054 19c.929 0 1.775-.102 2.552-.273l-2.746-2.746a3.987 3.987 0 0 1-3.787-3.787zM12.054 5c-1.855 0-3.375.404-4.642.998L3.707 2.293L2.293 3.707l18 18l1.414-1.414l-3.298-3.298c2.638-1.953 3.579-4.637 3.593-4.679l.105-.316l-.105-.316C21.98 11.617 19.687 5 12.054 5zm1.906 7.546c.187-.677.028-1.439-.492-1.96s-1.283-.679-1.96-.492L10 8.586A3.955 3.955 0 0 1 12.054 8c2.206 0 4 1.794 4 4a3.94 3.94 0 0 1-.587 2.053l-1.507-1.507z" />
+
+      </svg>
+      <svg id="hideNewPasswordIcon" xmlns="http://www.w3.org/2000/svg" width="21" height="14" fill="none"
+        viewBox="0 0 576 512" stroke="#4B4B4B" stroke-width="2">
+
+        <path fill="currentColor"
+          d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144a143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79a47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z" />
+      </svg>
+    </div>
+
+    <div id="confirmPasswordIcon">
+      <svg id="showConfirmPasswordIcon" xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 24 24"
+        fill="none">
+
+        <path fill="currentColor"
+          d="M8.073 12.194L4.212 8.333c-1.52 1.657-2.096 3.317-2.106 3.351L2 12l.105.316C2.127 12.383 4.421 19 12.054 19c.929 0 1.775-.102 2.552-.273l-2.746-2.746a3.987 3.987 0 0 1-3.787-3.787zM12.054 5c-1.855 0-3.375.404-4.642.998L3.707 2.293L2.293 3.707l18 18l1.414-1.414l-3.298-3.298c2.638-1.953 3.579-4.637 3.593-4.679l.105-.316l-.105-.316C21.98 11.617 19.687 5 12.054 5zm1.906 7.546c.187-.677.028-1.439-.492-1.96s-1.283-.679-1.96-.492L10 8.586A3.955 3.955 0 0 1 12.054 8c2.206 0 4 1.794 4 4a3.94 3.94 0 0 1-.587 2.053l-1.507-1.507z" />
+
+      </svg>
+      <svg id="hideConfirmPasswordIcon" xmlns="http://www.w3.org/2000/svg" width="21" height="14" fill="none"
+        viewBox="0 0 576 512" stroke="#4B4B4B" stroke-width="2">
+
+        <path fill="currentColor"
+          d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144a143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79a47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z" />
+      </svg>
+    </div>
+
     <div id="api" data-name="SelfAsserted" role="main">
       <div class="heading">
         <h1 role="heading">User Details</h1>
       </div>
-    <div class="buttons">
-    </div>
-    <div class="intro">
-      <p>Please provide the following details.</p>
-    </div>
-    <form id="attributeVerification" action="JavaScript:void(0);">
-        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div>
-        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div>
-        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div>
-        <div id="claimVerificationServerError" class="error pageLevel" style="display: none;" aria-hidden="true"></div>
+      <div class="buttons"></div>
+      <div class="intro">
+        <p>Please provide the following details.</p>
+      </div>
+      <form id="attributeVerification" action="JavaScript:void(0);">
+        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none" aria-hidden="true">
+          The password entry fields do not match. Please enter the same
+          password in both fields and try again.
+        </div>
+        <div id="requiredFieldMissing" class="error pageLevel" style="display: none" aria-hidden="true">
+          A required field is missing. Please fill out all required fields and
+          try again.
+        </div>
+        <div id="fieldIncorrect" class="error pageLevel" style="display: none" aria-hidden="true">
+          One or more fields are filled out incorrectly. Please check your
+          entries and try again.
+        </div>
+        <div id="claimVerificationServerError" class="error pageLevel" style="display: none" aria-hidden="true"></div>
         <div id="attributeList" class="attr">
-            <ul>
-                <li class="Password newPassword_li"><div class="attrEntry"><label id="newPassword_label" for="newPassword">New Password</label><div class="error itemLevel" role="alert"></div><input id="newPassword" class="textInput" type="password" placeholder="New Password" aria-label="New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title="Enter new password" autocomplete="new-password" aria-required="true" autofocus="autofocus"><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter new password">What is this?</a></div></li>
-                <li class="Password reenterPassword_li"><div class="attrEntry"><label id="reenterPassword_label" for="reenterPassword">Confirm New Password</label><div class="error itemLevel" role="alert"></div><input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password" aria-label="Confirm New Password" pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$" title="Confirm new password" autocomplete="new-password" aria-required="true"><a class="helpLink tiny" href="javascript:void(0)" data-help="Confirm new password">What is this?</a></div></li>
-            </ul>
+          <ul>
+            <li class="Password newPassword_li">
+              <div class="attrEntry">
+                <label id="newPassword_label" for="newPassword">New Password</label>
+                <div class="error itemLevel" role="alert"></div>
+                <input id="newPassword" class="textInput" type="password" placeholder="New Password"
+                  aria-label="New Password"
+                  pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
+                  title="Enter new password" autocomplete="new-password" aria-required="true" autofocus="autofocus" /><a
+                  class="helpLink tiny" href="javascript:void(0)" data-help="Enter new password">What is this?</a>
+              </div>
+            </li>
+            <li class="Password reenterPassword_li">
+              <div class="attrEntry">
+                <label id="reenterPassword_label" for="reenterPassword">Confirm New Password</label>
+                <div class="error itemLevel" role="alert"></div>
+                <input id="reenterPassword" class="textInput" type="password" placeholder="Confirm New Password"
+                  aria-label="Confirm New Password"
+                  pattern="^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)|(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]))([A-Za-z\d@#$%^&amp;*\-_+=[\]{}|\\:',?/`~&quot;();!]|\.(?!@)){8,16}$"
+                  title="Confirm new password" autocomplete="new-password" aria-required="true" /><a
+                  class="helpLink tiny" href="javascript:void(0)" data-help="Confirm new password">What is this?</a>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="buttons">
-            <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue">Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
+          <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue">
+            Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">
+            Cancel
+          </button>
         </div>
 
         <div class="verifying-modal">
-            <div id="verifying_blurb"></div>
+          <div id="verifying_blurb"></div>
         </div>
-    </form>
-    
-  </div>
+      </form>
+    </div>
     <div>
       <h1 class="custom-letter-spacing">TELEMEDICINE SIMPLIFIED</h1>
     </div>
@@ -486,7 +600,7 @@
   <script async>
     function isElementWithClassDisplayNone(className) {
       const element = document.querySelector(`.${className}`);
-      return element && window.getComputedStyle(element).display === 'none';
+      return element && window.getComputedStyle(element).display === "none";
     }
 
     (() => {
@@ -510,53 +624,84 @@
 
       // Close the dropdown when clicking outside of it
       document.addEventListener("click", function (event) {
-        if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
-          dropdownContent.classList.remove('show');
+        if (
+          !event.target.matches(".icon-inner") &&
+          !event.target.matches(".text-header")
+        ) {
+          dropdownContent.classList.remove("show");
         }
       });
 
-      const submitBtnEle = document.getElementById('next');
+      const submitBtnEle = document.getElementById("next");
       if (submitBtnEle && submitBtnEle != undefined) {
-        submitBtnEle.textContent = 'LOG IN';
+        submitBtnEle.textContent = "LOG IN";
       }
 
-      const forgotPasswordEle = document.getElementById('forgotPassword');
+      const forgotPasswordEle = document.getElementById("forgotPassword");
       if (forgotPasswordEle && forgotPasswordEle != undefined) {
-        forgotPasswordEle.textContent = "Forgot password?"
+        forgotPasswordEle.textContent = "Forgot password?";
       }
 
       let emailShowInterval = setInterval(() => {
-        if(!isElementWithClassDisplayNone('VerificationCode') && !document.querySelector('input[type="password"]')){
-          document.getElementById('email').style.display = 'none';
-          document.getElementById('email_label').style.display = 'none';
-          document.getElementsByClassName('forgotpassword')[0].style.display = 'none';
-          document.getElementsByClassName('registeredemail')[0].style.display = 'none';
-          let codeNotReceivedText = document.createElement('span');
-          codeNotReceivedText.textContent = 'Code Not Received?';
-          codeNotReceivedText.id = 'codeNotReceivedText';
-          const emailVerificationControl_but_send_new_code_ele = document.getElementById('emailVerificationControl_but_send_new_code');
-          emailVerificationControl_but_send_new_code_ele.textContent = 'Resend';
-          emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(codeNotReceivedText,emailVerificationControl_but_send_new_code_ele);
+        if (
+          !isElementWithClassDisplayNone("VerificationCode") &&
+          !document.querySelector('input[type="password"]')
+        ) {
+          document.getElementById("email").style.display = "none";
+          document.getElementById("email_label").style.display = "none";
+          document.getElementsByClassName("forgotpassword")[0].style.display =
+            "none";
+          document.getElementsByClassName(
+            "registeredemail"
+          )[0].style.display = "none";
+          let codeNotReceivedText = document.createElement("span");
+          codeNotReceivedText.textContent = "Code Not Received?";
+          codeNotReceivedText.id = "codeNotReceivedText";
+          const emailVerificationControl_but_send_new_code_ele =
+            document.getElementById(
+              "emailVerificationControl_but_send_new_code"
+            );
+          emailVerificationControl_but_send_new_code_ele.textContent =
+            "Resend";
+          emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(
+            codeNotReceivedText,
+            emailVerificationControl_but_send_new_code_ele
+          );
 
-          let codeExpireTextEle = document.createElement('p');
-          codeExpireTextEle.id = 'codeExpireText';
-          codeExpireTextEle.textContent = 'This code will expire in 10 minutes.';
-          const VerificationCodeEle = document.getElementById('VerificationCode');
-          VerificationCodeEle.insertAdjacentElement('afterend', codeExpireTextEle);
+          let codeExpireTextEle = document.createElement("p");
+          codeExpireTextEle.id = "codeExpireText";
+          codeExpireTextEle.textContent =
+            "This code will expire in 10 minutes.";
+          const VerificationCodeEle =
+            document.getElementById("VerificationCode");
+          VerificationCodeEle.insertAdjacentElement(
+            "afterend",
+            codeExpireTextEle
+          );
 
-          const emailVerificationControl_but_verify_code_ele = document.getElementById('emailVerificationControl_but_verify_code');
-          emailVerificationControl_but_verify_code_ele.textContent = 'VERIFY';
-          emailVerificationControl_but_verify_code_ele.addEventListener("click", hideCodeNotReceivedText);
+          const emailVerificationControl_but_verify_code_ele =
+            document.getElementById(
+              "emailVerificationControl_but_verify_code"
+            );
+          emailVerificationControl_but_verify_code_ele.textContent = "VERIFY";
+          emailVerificationControl_but_verify_code_ele.addEventListener(
+            "click",
+            hideCodeNotReceivedText
+          );
 
           function hideCodeNotReceivedText() {
-            codeNotReceivedText.style.display = 'none';
-            const continueBtnEle = document.getElementById('continue');
-            continueBtnEle.style.display = 'unset';
+            codeNotReceivedText.style.display = "none";
+            const continueBtnEle = document.getElementById("continue");
+            continueBtnEle.style.display = "unset";
 
             const changeClaimsInterval = setInterval(() => {
-              if(!isElementWithClassDisplayNone('changeClaims')){
-                const emailVerificationControl_but_change_claims_ele = document.getElementById('emailVerificationControl_but_change_claims');
-                emailVerificationControl_but_change_claims_ele.style.display = 'none';              
+              if (!isElementWithClassDisplayNone("changeClaims")) {
+                const emailVerificationControl_but_change_claims_ele =
+                  document.getElementById(
+                    "emailVerificationControl_but_change_claims"
+                  );
+                emailVerificationControl_but_change_claims_ele.style.display =
+                  "none";
                 clearInterval(changeClaimsInterval);
               }
             });
@@ -567,37 +712,82 @@
       });
 
       const resetPasswordInterval = setInterval(() => {
-        if (document.querySelector('input[type="password"]') && isElementWithClassDisplayNone('reenterPassword_li') == false) {
-          const forgotpasswordEle = document.getElementsByClassName('forgotpassword');
-          forgotpasswordEle[0].textContent = 'Reset Password';
-          const registeredemailEle = document.getElementsByClassName('registeredemail');
-          registeredemailEle[0].style.display = 'none';
+        if (
+          document.querySelector('input[type="password"]') &&
+          isElementWithClassDisplayNone("reenterPassword_li") == false
+        ) {
+          const forgotpasswordEle =
+            document.getElementsByClassName("forgotpassword");
+          forgotpasswordEle[0].textContent = "Reset Password";
+          const registeredemailEle =
+            document.getElementsByClassName("registeredemail");
+          registeredemailEle[0].style.display = "none";
 
-          const continueBtnEle = document.getElementById('continue');
-            continueBtnEle.style.display = 'unset';
-            continueBtnEle.style.marginTop = 'unset';
-            continueBtnEle.textContent = 'RESET PASSWORD';
+          const continueBtnEle = document.getElementById("continue");
+          continueBtnEle.style.display = "unset";
+          continueBtnEle.style.marginTop = "unset";
+          continueBtnEle.textContent = "RESET PASSWORD";
+
+          const passwordInstrunctionEle = document.createElement("ul");
+            passwordInstrunctionEle.id = "passswordInstruction";
+            passwordInstrunctionEle.innerHTML = `
+                <li>Must be at least 8 characters</li>
+                <li>Must contain uppercase and lowercase letters</li>
+                <li>Must contain at least one number</li>
+                <li>Must contain at least one symbol</li>
+            `;
+            const newPasswordEle = document.querySelector("#newPassword");
+            newPasswordEle.insertAdjacentElement(
+              "afterend",
+              passwordInstrunctionEle
+            );
           clearInterval(resetPasswordInterval);
         }
       });
     })();
 
     (async () => {
-      const clientUrls = await (await fetch('https://shashanksingh234.github.io/B2CPages/clientUrls.json')).json();
+      const clientUrls = await (
+        await fetch(
+          "https://shashanksingh234.github.io/B2CPages/clientUrls.json"
+        )
+      ).json();
       if (clientUrls?.length) {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const redirectURL = urlParams.get('redirect_uri') || '';
+        const redirectURL = urlParams.get("redirect_uri") || "";
         const client = clientUrls.find((client) => client.url == redirectURL);
         if (client) {
-          const clientLogoEle = document.getElementById('client-logo');
+          const clientLogoEle = document.getElementById("client-logo");
           if (clientLogoEle && clientLogoEle != undefined) {
             const { logo } = client;
-            clientLogoEle.style.display = 'unset';
+            clientLogoEle.style.display = "unset";
             clientLogoEle.src = logo;
           }
         }
       }
+    })();
+
+    (() => {
+      const enablePasswordVisibility = (showPasswordIconId,hidePasswordIconId,passwordId) =>{
+        var showIcon = document.getElementById(showPasswordIconId);
+        var hideIcon = document.getElementById(hidePasswordIconId);
+        var passwordInput = document.getElementById(passwordId);
+  
+        hideIcon.addEventListener("click", function () {
+          passwordInput.type = "password";
+          hideIcon.style.display = "none";
+          showIcon.style.display = "block";
+        });
+  
+        showIcon.addEventListener("click", function () {
+          passwordInput.type = "text";
+          showIcon.style.display = "none";
+          hideIcon.style.display = "block";
+        });
+      }
+      enablePasswordVisibility('showNewPasswordIcon','hideNewPasswordIcon','newPassword');
+      enablePasswordVisibility('showConfirmPasswordIcon','hideConfirmPasswordIcon','reenterPassword');
     })();
   </script>
 </body>
