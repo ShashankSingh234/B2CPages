@@ -2,11 +2,21 @@
     {
         "name": "Avibra",
         "url": "https://careington-client-web.intuitivedial.com/",
-        "logo": "https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg"
+        "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/avibra.png"
     },
     {
-        "name": "Avibra",
+        "name": "Client a",
         "url": "https://careington-web-client-a.intuitivedial.com/",
-        "logo": "https://dcsaastestwebstore01.blob.core.windows.net/branding-assets/clients-logo/avibra.png"
+        "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo1.jpg"
+    },
+	{
+        "name": "Client b",
+        "url": "https://careington-web-client-b.intuitivedial.com/",
+        "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo2.jpg"
+    },
+	{
+        "name": "Client c",
+        "url": "https://careington-web-client-c.intuitivedial.com/",
+        "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo3.jpg"
     }
 ]
