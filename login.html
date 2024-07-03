@@ -477,6 +477,9 @@
 
       const signInName = document.querySelector('label[for="signInName"]');
       signInName.textContent = 'Username';
+			const signInNameInpEle = document.getElementById('signInName');
+      signInNameInpEle.placeholder = 'Username';
+      signInNameInpEle.title = 'Enter Username';
     })();
 
     (() => {
@@ -498,7 +501,7 @@
     })();
 
     (async () => {
-      const clientUrls = await (await fetch('https://shashanksingh234.github.io/B2CPages/clientUrls.json')).json();
+      const clientUrls = await (await fetch('https://careingtoncustomui.blob.core.windows.net/customuiclient/clientUrls.json')).json();
       if (clientUrls?.length) {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
