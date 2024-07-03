@@ -422,7 +422,7 @@
 
 
     <div id="api" data-name="Unified" role="main" style="padding: 10px;">
-
+      
     </div>
 
     <div>
@@ -474,6 +474,9 @@
       if (forgotPasswordEle && forgotPasswordEle != undefined) {
         forgotPasswordEle.textContent = "Forgot password?"
       }
+
+      const signInName = document.querySelector('label[for="signInName"]');
+      signInName.textContent = 'Username';
     })();
 
     (() => {
