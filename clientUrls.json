@@ -1,22 +1,22 @@
 [
     {
         "name": "Avibra",
-        "url": "https://careington-client-web.intuitivedial.com/",
+        "url": "login.intuitivedial.com",
         "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/avibra.png"
     },
     {
         "name": "Client a",
-        "url": "https://careington-web-client-a.intuitivedial.com/",
+        "url": "b2c-client-a.intuitivedial.com",
         "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo1.jpg"
     },
 	{
         "name": "Client b",
-        "url": "https://careington-web-client-b.intuitivedial.com/",
+        "url": "b2c-client-b.intuitivedial.com",
         "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo2.jpg"
     },
 	{
         "name": "Client c",
-        "url": "https://careington-web-client-c.intuitivedial.com/",
+        "url": "b2c-client-c.intuitivedial.com",
         "logo": "https://careingtoncustomui.blob.core.windows.net/customuiclient/dummylogo3.jpg"
     }
 ]

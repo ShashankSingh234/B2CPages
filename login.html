@@ -503,9 +503,7 @@
     (async () => {
       const clientUrls = await (await fetch('https://careingtoncustomui.blob.core.windows.net/customuiclient/clientUrls.json')).json();
       if (clientUrls?.length) {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const redirectURL = urlParams.get('redirect_uri') || '';
+        const redirectURL = window.location.hostname || '';
         const client = clientUrls.find((client) => client.url == redirectURL);
         if (client) {
           const clientLogoEle = document.getElementById('client-logo');

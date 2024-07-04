@@ -734,9 +734,9 @@
         )
       ).json();
       if (clientUrls?.length) {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const redirectURL = urlParams.get("redirect_uri") || "";
+        // const queryString = window.location.search;
+        // const urlParams = new URLSearchParams(queryString);
+        const redirectURL = window.location.hostname || "";
         const client = clientUrls.find((client) => client.url == redirectURL);
         if (client) {
           const clientLogoEle = document.getElementById("client-logo");
