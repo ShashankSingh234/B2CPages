@@ -535,16 +535,7 @@
     }
 
     (() => {
-      const submitBtnEle = document.getElementById("next");
-      if (submitBtnEle && submitBtnEle != undefined) {
-        submitBtnEle.textContent = "LOG IN";
-      }
-
-      const forgotPasswordEle = document.getElementById("forgotPassword");
-      if (forgotPasswordEle && forgotPasswordEle != undefined) {
-        forgotPasswordEle.textContent = "Forgot password?";
-      }
-
+    
       let emailShowInterval = setInterval(() => {
         if (
           !isElementWithClassDisplayNone("VerificationCode") &&
