@@ -474,7 +474,7 @@
         rememberMeEle?.addEventListener('change', (event) => {
           if (event.target.checked) {
             if (usernameEle.value) {
-              cookie.set('username', usernameEle.value, 30);
+              cookie.set('username', usernameEle.value, 365);
               console.log(usernameEle.value);
             }
           } else {
