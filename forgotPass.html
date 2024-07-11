@@ -313,17 +313,20 @@
     #cancel {
       display: none !important;
     }
+
     .heading h1 {
       color: #003057;
       font-size: 20px;
       font-weight: 700;
       text-align: center;
     }
+
     .intro p {
       text-align: center;
       max-width: 262px;
       margin: 0 auto;
     }
+
     #continue {
       display: none;
       margin-top: 70px;
@@ -412,14 +415,16 @@
       transition: border-color 0.3s;
       border-radius: 4px;
     }
-    
-    .attrEntry{
+
+    .attrEntry {
       position: relative;
     }
 
-    #newPasswordIcon,#confirmPasswordIcon {
+    #newPasswordIcon,
+    #confirmPasswordIcon {
       display: none;
-      svg{
+
+      svg {
         position: absolute;
         transform: translateY(-50%);
         cursor: pointer;
@@ -433,8 +438,10 @@
       svg {
         margin-top: 40px;
       }
-      #hideNewPasswordIcon{
-        display: none;;
+
+      #hideNewPasswordIcon {
+        display: none;
+        ;
       }
     }
 
@@ -442,11 +449,11 @@
       svg {
         margin-top: 200px;
       }
-      #hideConfirmPasswordIcon{
+
+      #hideConfirmPasswordIcon {
         display: none;
       }
     }
-    
   </style>
 </head>
 
@@ -494,31 +501,94 @@
       <div class="heading">
         <h1 role="heading">User Details</h1>
       </div>
-    <div class="buttons">
-    </div>
-    <div class="intro">
-      <p>Please provide the following details.</p>
-    </div>
-    <form id="attributeVerification" action="JavaScript:void(0);">
-        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div>
-        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div>
-        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div>
+      <div class="buttons">
+      </div>
+      <div class="intro">
+        <p>Please provide the following details.</p>
+      </div>
+      <form id="attributeVerification" action="JavaScript:void(0);">
+        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password
+          entry fields do not match. Please enter the same password in both fields and try again.</div>
+        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required
+          field is missing. Please fill out all required fields and try again.</div>
+        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields
+          are filled out incorrectly. Please check your entries and try again.</div>
         <div id="claimVerificationServerError" class="error pageLevel" style="display: none;" aria-hidden="true"></div>
         <div id="attributeList" class="attr">
-            <ul>
-                <li class="VerificationControl emailVerificationControl_li"><div class="attrEntry"><label id="emailVerificationControl_label" for="emailVerificationControl"></label><div class="error itemLevel" role="alert"></div><div class="verificationControlContent" id="emailVerificationControl"><div class="verificationInfoText"><div id="emailVerificationControl_info_message" aria-hidden="true" role="alert" aria-label="Verification is necessary. Please click Send button." style="display: none;">Verification is necessary. Please click Send button.</div></div><div class="verificationSuccessText"><div id="emailVerificationControl_success_message" aria-hidden="false" role="alert" aria-label="The code has been verified. You can now continue." style="display: inline;">The code has been verified. You can now continue.</div></div><div class="verificationErrorText error"><div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label="" style="display: none;"></div></div><ul><li class="TextBox email_li email" aria-hidden="false" style="display: inline;"><div class="attrEntry"><label id="email_label" for="email" style="display: none;">Email Address</label><div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input id="email" class="textInput" type="text" placeholder="Email Address" aria-label="Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" title="Email address that can be used to contact you." aria-required="true" autofocus="autofocus" style="display: none;" disabled=""><a class="helpLink tiny" href="javascript:void(0)" data-help="Email address that can be used to contact you.">What is this?</a></div></li><li class="TextBox VerificationCode_li VerificationCode" aria-hidden="true" style="display: none;"><div class="attrEntry"><label id="VerificationCode_label" for="VerificationCode">Verification Code</label><div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input id="VerificationCode" class="textInput" type="text" placeholder="Verification Code" aria-label="Verification Code" title="Enter your email verification code" aria-required="true" autocomplete="off" disabled=""><p id="codeExpireText">This code will expire in 10 minutes.</p><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter your email verification code">What is this?</a></div></li></ul><div class="working" style="display: none;" aria-hidden="true"></div><div class="buttons"><button class="sendCode" id="emailVerificationControl_but_send_code" type="button" aria-label="Send verification code" aria-hidden="true" style="display: none;">Send verification code</button><button class="verifyCode" id="emailVerificationControl_but_verify_code" type="button" aria-label="Verify code" aria-hidden="true" style="display: none;">VERIFY</button><span id="codeNotReceivedText" style="display: none;">Code Not Received?</span><button class="sendNewCode" id="emailVerificationControl_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="true" style="display: none;">Resend</button><button class="changeClaims" id="emailVerificationControl_but_change_claims" type="button" aria-label="Change Email Address" aria-hidden="false" style="display: none;">Change</button></div></div><a class="helpLink tiny" href="javascript:void(0)">What is this?</a></div></li>
-            </ul>
+          <ul>
+            <li class="VerificationControl emailVerificationControl_li">
+              <div class="attrEntry">
+                <label id="emailVerificationControl_label" for="emailVerificationControl"></label>
+                <div class="error itemLevel" role="alert"></div>
+                <div class="verificationControlContent" id="emailVerificationControl">
+                  <div class="verificationInfoText">
+                    <div id="emailVerificationControl_info_message" aria-hidden="true" role="alert"
+                      aria-label="Verification is necessary. Please click Send button." style="display: none;">
+                      Verification is necessary. Please click Send button.</div>
+                  </div>
+                  <div class="verificationSuccessText">
+                    <div id="emailVerificationControl_success_message" aria-hidden="false" role="alert"
+                      aria-label="The code has been verified. You can now continue." style="display: inline;">The code
+                      has been verified. You can now continue.</div>
+                  </div>
+                  <div class="verificationErrorText error">
+                    <div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label=""
+                      style="display: none;"></div>
+                  </div>
+                  <ul>
+                    <li class="TextBox email_li email" aria-hidden="false" style="display: inline;">
+                      <div class="attrEntry"><label id="email_label" for="email" style="display: none;">Email
+                          Address</label>
+                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input
+                          id="email" class="textInput" type="text" placeholder="Email Address"
+                          aria-label="Email Address"
+                          pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
+                          title="Email address that can be used to contact you." aria-required="true"
+                          autofocus="autofocus" style="display: none;" disabled=""><a class="helpLink tiny"
+                          href="javascript:void(0)" data-help="Email address that can be used to contact you.">What is
+                          this?</a>
+                      </div>
+                    </li>
+                    <li class="TextBox VerificationCode_li VerificationCode" aria-hidden="true" style="display: none;">
+                      <div class="attrEntry"><label id="VerificationCode_label" for="VerificationCode">Verification
+                          Code</label>
+                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input
+                          id="VerificationCode" class="textInput" type="text" placeholder="Verification Code"
+                          aria-label="Verification Code" title="Enter your email verification code" aria-required="true"
+                          autocomplete="off" disabled="">
+                        <p id="codeExpireText">This code will expire in 10 minutes.</p><a class="helpLink tiny"
+                          href="javascript:void(0)" data-help="Enter your email verification code">What is this?</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="working" style="display: none;" aria-hidden="true"></div>
+                  <div class="buttons"><button class="sendCode" id="emailVerificationControl_but_send_code"
+                      type="button" aria-label="Send verification code" aria-hidden="true" style="display: none;">Send
+                      verification code</button><button class="verifyCode" id="emailVerificationControl_but_verify_code"
+                      type="button" aria-label="Verify code" aria-hidden="true"
+                      style="display: none;">VERIFY</button><span id="codeNotReceivedText" style="display: none;">Code
+                      Not Received?</span><button class="sendNewCode" id="emailVerificationControl_but_send_new_code"
+                      type="button" aria-label="Send new code" aria-hidden="true"
+                      style="display: none;">Resend</button><button class="changeClaims"
+                      id="emailVerificationControl_but_change_claims" type="button" aria-label="Change Email Address"
+                      aria-hidden="false" style="display: none;">Change</button></div>
+                </div><a class="helpLink tiny" href="javascript:void(0)">What is this?</a>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="buttons">
-            <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue" style="display: unset;">Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
+          <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue"
+            style="display: unset;">Continue</button><button id="cancel" aria-label="Cancel"
+            formnovalidate="">Cancel</button>
         </div>
 
         <div class="verifying-modal">
-            <div id="verifying_blurb"></div>
+          <div id="verifying_blurb"></div>
         </div>
-    </form>
-    
-  </div>
+      </form>
+
+    </div>
     <div>
       <h1 class="custom-letter-spacing">TELEMEDICINE SIMPLIFIED</h1>
     </div>
@@ -538,7 +608,7 @@
     }
 
     (() => {
-    
+
       let emailShowInterval = setInterval(() => {
         if (
           !isElementWithClassDisplayNone("VerificationCode") &&
@@ -592,10 +662,10 @@
             continueBtnEle.style.display = "unset";
 
             const registeredemail = document.getElementsByClassName(
-            "registeredemail"
-          )[0];
-          registeredemail.style.display = "block";
-          registeredemail.textContent = "Email verified successfully!";
+              "registeredemail"
+            )[0];
+            registeredemail.style.display = "block";
+            registeredemail.textContent = "Email verified successfully!";
 
             const changeClaimsInterval = setInterval(() => {
               if (!isElementWithClassDisplayNone("changeClaims")) {
@@ -632,23 +702,23 @@
           continueBtnEle.textContent = "RESET PASSWORD";
 
           const passwordInstrunctionEle = document.createElement("ul");
-            passwordInstrunctionEle.id = "passswordInstruction";
-            passwordInstrunctionEle.innerHTML = `
+          passwordInstrunctionEle.id = "passswordInstruction";
+          passwordInstrunctionEle.innerHTML = `
                 <li>Must be at least 8 characters</li>
                 <li>Must contain uppercase and lowercase letters</li>
                 <li>Must contain at least one number</li>
                 <li>Must contain at least one symbol</li>
             `;
-            const newPasswordEle = document.querySelector("#newPassword");
-            newPasswordEle.insertAdjacentElement(
-              "afterend",
-              passwordInstrunctionEle
-            );
+          const newPasswordEle = document.querySelector("#newPassword");
+          newPasswordEle.insertAdjacentElement(
+            "afterend",
+            passwordInstrunctionEle
+          );
 
-            const newPasswordIconEle = document.getElementById('newPasswordIcon');
-            newPasswordIconEle.style.display = 'unset';
-            const confirmPasswordIconEle = document.getElementById('confirmPasswordIcon');
-            confirmPasswordIconEle.style.display = 'unset';
+          const newPasswordIconEle = document.getElementById('newPasswordIcon');
+          newPasswordIconEle.style.display = 'unset';
+          const confirmPasswordIconEle = document.getElementById('confirmPasswordIcon');
+          confirmPasswordIconEle.style.display = 'unset';
           clearInterval(resetPasswordInterval);
         }
       });
@@ -675,25 +745,25 @@
     })();
 
     (() => {
-      const enablePasswordVisibility = (showPasswordIconId,hidePasswordIconId,passwordId) =>{
+      const enablePasswordVisibility = (showPasswordIconId, hidePasswordIconId, passwordId) => {
         var showIcon = document.getElementById(showPasswordIconId);
         var hideIcon = document.getElementById(hidePasswordIconId);
         var passwordInput = document.getElementById(passwordId);
-  
+
         hideIcon.addEventListener("click", function () {
           passwordInput.type = "password";
           hideIcon.style.display = "none";
           showIcon.style.display = "block";
         });
-  
+
         showIcon.addEventListener("click", function () {
           passwordInput.type = "text";
           showIcon.style.display = "none";
           hideIcon.style.display = "block";
         });
       }
-      enablePasswordVisibility('showNewPasswordIcon','hideNewPasswordIcon','newPassword');
-      enablePasswordVisibility('showConfirmPasswordIcon','hideConfirmPasswordIcon','reenterPassword');
+      enablePasswordVisibility('showNewPasswordIcon', 'hideNewPasswordIcon', 'newPassword');
+      enablePasswordVisibility('showConfirmPasswordIcon', 'hideConfirmPasswordIcon', 'reenterPassword');
     })();
   </script>
 </body>
