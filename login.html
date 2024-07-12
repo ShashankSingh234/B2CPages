@@ -410,8 +410,8 @@
         </div>
         <div class="dropdown-content" id="languageDropdown">
           <div class="card-2">
-            <a href="#" style="background-color: #003057;color: white;margin-bottom: 7px;">English</a>
-            <a href="#">Spanish</a>
+            <a href="#" onclick="changeLanguage('en')" style="background-color: #003057;color: white;margin-bottom: 7px;">English</a>
+            <a href="#" onclick="changeLanguage('es')">Spanish</a>
           </div>
         </div>
       </div>
@@ -494,6 +494,26 @@
         document.addEventListener("click", function (event) {
           if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
             dropdownContent.classList.remove('show');
+          }
+        });
+        function changeLanguage(language) {
+          // Set the ui_locales parameter
+          const url = new URL(window.location.href);
+          url.searchParams.set('ui_locales', language);
+
+          // Reload the page with the new parameter
+          window.location.href = url.href;
+        }
+        const urlParams = new URLSearchParams(window.location.search);
+         const currentLanguage = urlParams.get('ui_locales') || 'en';
+         document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
+
+        // Update the active class in the dropdown
+        document.querySelectorAll('.dropdown-content a').forEach(anchor => {
+          if (anchor.getAttribute('onclick').includes(currentLanguage)) {
+            anchor.classList.add('active');
+          } else {
+            anchor.classList.remove('active');
           }
         });
       
