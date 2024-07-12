@@ -379,6 +379,32 @@
     .dropdown-item:last-child {
       border-bottom: none; 
     }
+    .show {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-inner {
+    position: relative;
+    
+    bottom: 31px;
+    right: 35px;
+  }
+}
+.text-header{
+    text-align: end;
+    position: relative;
+    
+    bottom: 4px;
+    right: 0px;
+    color: #4B4B4B;
+
+}
+@media only screen and (max-width: 600px) {
+  .text-header{
+    display: none; /* Hide English text on mobile screens */
+  }
+}
   </style>
 </head>
 
