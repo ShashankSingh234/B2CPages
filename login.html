@@ -361,19 +361,7 @@
       padding: 5px;
     }
     .language {
-      float: right;
       margin: 4px;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      border-radius: 6px; 
-
-      z-index: 1;
-      right: 0;
-      
     }
 
     .dropdown-content a {
@@ -467,52 +455,53 @@
 
 
     (() => {
-      var showIcon = document.getElementById("showPasswordIcon");
-      var hideIcon = document.getElementById("hidePasswordIcon");
-      var passwordInput = document.getElementById("password");
+        var showIcon = document.getElementById("showPasswordIcon");
+        var hideIcon = document.getElementById("hidePasswordIcon");
+        var passwordInput = document.getElementById("password");
 
-      hideIcon.addEventListener("click", function () {
-        passwordInput.type = "text";
-        hideIcon.style.display = "none";
-        showIcon.style.display = "block";
-      });
+        hideIcon.addEventListener("click", function () {
+          passwordInput.type = "text";
+          hideIcon.style.display = "none";
+          showIcon.style.display = "block";
+        });
 
-      showIcon.addEventListener("click", function () {
-        passwordInput.type = "password";
-        showIcon.style.display = "none";
-        hideIcon.style.display = "block";
-      });
-      document.getElementById('language').addEventListener('change', function() {
+        showIcon.addEventListener("click", function () {
+          passwordInput.type = "password";
+          showIcon.style.display = "none";
+          hideIcon.style.display = "block";
+        });
+        document.getElementById('language').addEventListener('change', function() {
             const selectedLanguage = this.value;
             const url = new URL(window.location);
             url.searchParams.set('ui_locales', selectedLanguage);
             window.location.href = url;
         });
         document.addEventListener("DOMContentLoaded", function() {
-    // Get the icon and text elements
-    const icon = document.querySelector(".icon-inner");
-    const text = document.querySelector(".text-header");
+        // Get the icon and text elements
+        const icon = document.querySelector(".icon-inner");
+        const text = document.querySelector(".text-header");
     
-    // Get the dropdown content
-    const dropdownContent = document.getElementById("languageDropdown");
+        // Get the dropdown content
+        const dropdownContent = document.getElementById("languageDropdown");
+      
+        // Add click event listeners to the icon and text
+        icon.addEventListener("click", function(event) {
+          event.stopPropagation();
+          dropdownContent.classList.toggle("show");
+        });
+      
+        text.addEventListener("click", function(event) {
+          event.stopPropagation();
+          dropdownContent.classList.toggle("show");
+        });
   
-    // Add click event listeners to the icon and text
-    icon.addEventListener("click", function(event) {
-      event.stopPropagation();
-      dropdownContent.classList.toggle("show");
-    });
-  
-    text.addEventListener("click", function(event) {
-      event.stopPropagation();
-      dropdownContent.classList.toggle("show");
-    });
-  
-    // Close the dropdown when clicking outside of it
-    document.addEventListener("click", function(event) {
-      if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
-        dropdownContent.classList.remove('show');
-      }
-    });
+        // Close the dropdown when clicking outside of it
+        document.addEventListener("click", function(event) {
+          if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
+            dropdownContent.classList.remove('show');
+          }
+        });
+      });
     })();
 
     (async () => {
