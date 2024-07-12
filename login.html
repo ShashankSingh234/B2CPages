@@ -476,12 +476,12 @@
         showIcon.style.display = "none";
         hideIcon.style.display = "block";
       });
-      document.getElementById('language').addEventListener('change', function () {
-        const selectedLanguage = this.value;
-        const url = new URL(window.location);
-        url.searchParams.set('ui_locales', selectedLanguage);
-        window.location.href = url;
-      });
+      // document.getElementById('language').addEventListener('change', function () {
+      //   const selectedLanguage = this.value;
+      //   const url = new URL(window.location);
+      //   url.searchParams.set('ui_locales', selectedLanguage);
+      //   window.location.href = url;
+      // });
       document.addEventListener("DOMContentLoaded", function () {
         // Get the icon and text elements
         const icon = document.querySelector(".icon-inner");
