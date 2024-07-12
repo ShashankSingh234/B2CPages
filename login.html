@@ -480,19 +480,15 @@
       document.addEventListener("DOMContentLoaded", function () {
         const icon = document.querySelector(".icon-inner");
         const text = document.querySelector(".text-header");
-        console.log(icon, text)
         const dropdownContent = document.getElementById("languageDropdown");
 
         icon.addEventListener("click", function (event) {
           event.stopPropagation();
-          alert("this")
           dropdownContent.classList.toggle("show");
         });
 
         text.addEventListener("click", function (event) {
           event.stopPropagation();
-          alert("this")
-
           dropdownContent.classList.toggle("show");
         });
 
