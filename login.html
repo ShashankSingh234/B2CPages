@@ -380,6 +380,9 @@
         /* Hide English text on mobile screens */
       }
     }
+    .language a.active {
+      background-color: #003057;color: white;margin-bottom: 7px;
+    }
   </style>
 </head>
 
@@ -410,8 +413,8 @@
         </div>
         <div class="dropdown-content" id="languageDropdown">
           <div class="card-2">
-            <a href="#" onclick="changeLanguage('en')" style="background-color: #003057;color: white;margin-bottom: 7px;">English</a>
-            <a href="#" onclick="changeLanguage('es')">Spanish</a>
+            <a href="#" data-target="en">English</a>
+            <a href="#" data-target="es">Spanish</a>
           </div>
         </div>
       </div>
@@ -496,14 +499,18 @@
             dropdownContent.classList.remove('show');
           }
         });
-        function changeLanguage(language) {
+        $('.dropdown-content a').addEventListener("click", function (event) {
+          // Set the ui_locales parameter
+          event.preventDefault();
+          const languageData = event.target.getAttribute('data-target');
+          
           // Set the ui_locales parameter
           const url = new URL(window.location.href);
-          url.searchParams.set('ui_locales', language);
+          url.searchParams.set('ui_locales', languageData);
 
           // Reload the page with the new parameter
           window.location.href = url.href;
-        }
+        })
         const urlParams = new URLSearchParams(window.location.search);
          const currentLanguage = urlParams.get('ui_locales') || 'en';
          document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
