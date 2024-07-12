@@ -499,9 +499,9 @@
             dropdownContent.classList.remove('show');
           }
         });
-        const dropdownContent = document.querySelector('.dropdown-content');
+        const dropdownContentAnchor = document.querySelector('.dropdown-content');
 
-      dropdownContent.addEventListener('click', function(event) {
+        dropdownContentAnchor.addEventListener('click', function(event) {
         if (event.target.tagName === 'A') {
           event.preventDefault();
           const languageData = event.target.getAttribute('data-target');
