@@ -499,8 +499,10 @@
             dropdownContent.classList.remove('show');
           }
         });
-        $('.dropdown-content a').addEventListener("click", function (event) {
-          // Set the ui_locales parameter
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+      dropdownContent.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
           event.preventDefault();
           const languageData = event.target.getAttribute('data-target');
           
@@ -510,7 +512,8 @@
 
           // Reload the page with the new parameter
           window.location.href = url.href;
-        })
+        }
+      });
         const urlParams = new URLSearchParams(window.location.search);
          const currentLanguage = urlParams.get('ui_locales') || 'en';
          document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
