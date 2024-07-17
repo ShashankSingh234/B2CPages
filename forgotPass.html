@@ -307,24 +307,13 @@
     }
 
     .verificationSuccessText,
+    .heading,
+    .intro,
     .verificationInfoText,
     .helpLink,
     #email_ver_but_edit,
     #cancel {
       display: none !important;
-    }
-
-    .heading h1 {
-      color: #003057;
-      font-size: 20px;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .intro p {
-      text-align: center;
-      max-width: 262px;
-      margin: 0 auto;
     }
 
     #continue {
@@ -415,16 +404,14 @@
       transition: border-color 0.3s;
       border-radius: 4px;
     }
-
-    .attrEntry {
+    
+    .attrEntry{
       position: relative;
     }
 
-    #newPasswordIcon,
-    #confirmPasswordIcon {
+    #newPasswordIcon,#confirmPasswordIcon {
       display: none;
-
-      svg {
+      svg{
         position: absolute;
         transform: translateY(-50%);
         cursor: pointer;
@@ -438,51 +425,20 @@
       svg {
         margin-top: 40px;
       }
-
-      #hideNewPasswordIcon {
-        display: none;
+      #hideNewPasswordIcon{
+        display: none;;
       }
     }
 
-    #confirmPasswordIcon svg {
+    #confirmPasswordIcon {
+      svg {
         margin-top: 200px;
       }
-
-    #hideConfirmPasswordIcon, 
-    #continue {
+      #hideConfirmPasswordIcon{
         display: none;
+      }
     }
     
-    #language {
-      border-radius: 5px;
-      height: 60%;
-      margin-left: 10px;
-      padding: 5px;
-    }
-
-    .language {
-      margin: 4px;
-    }
-
-
-    @media only screen and (max-width: 600px) {
-      .icon-inner {
-        position: relative;
-
-        bottom: 31px;
-        right: 35px;
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .text-header {
-        display: none;
-        /* Hide English text on mobile screens */
-      }
-    }
-    .language a.active {
-      background-color: #003057;color: white;margin-bottom: 7px;
-    }
   </style>
 </head>
 
@@ -491,35 +447,14 @@
     <img class="image-coBrand" id="client-logo" width="135" height="35" />
     <img class="image" src="https://www.dialcare.com/images/DialCare%20Telemedicine%20Simplified%20Logo.png" width="135"
       height="30" />
-      <div class="language">
-        <div class="language-selector" id="languageSelector">
-          <div>
-            <span class="icon-inner">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="s-ion-icon">
-                <path id="Vector"
-                  d="M10 18.75C10.6523 18.75 11.5781 18.1875 12.418 16.5117C12.8047 15.7383 13.1289 14.8047 13.3594 13.75H6.64062C6.87109 14.8047 7.19531 15.7383 7.58203 16.5117C8.42188 18.1875 9.34766 18.75 10 18.75ZM6.41797 12.5H13.582C13.6914 11.7109 13.75 10.8711 13.75 10C13.75 9.12891 13.6914 8.28906 13.582 7.5H6.41797C6.30859 8.28906 6.25 9.12891 6.25 10C6.25 10.8711 6.30859 11.7109 6.41797 12.5ZM6.64062 6.25H13.3594C13.1289 5.19531 12.8047 4.26172 12.418 3.48828C11.5781 1.8125 10.6523 1.25 10 1.25C9.34766 1.25 8.42188 1.8125 7.58203 3.48828C7.19531 4.26172 6.87109 5.19531 6.64062 6.25ZM14.8438 7.5C14.9453 8.30078 15 9.13672 15 10C15 10.8633 14.9453 11.6992 14.8438 12.5H18.3906C18.625 11.707 18.7539 10.8672 18.7539 10C18.7539 9.13281 18.6289 8.29297 18.3906 7.5H14.8438ZM17.9102 6.25C16.8984 4.12109 15.0547 2.46484 12.7969 1.70703C13.6172 2.8125 14.2656 4.39453 14.6406 6.25H17.9141H17.9102ZM5.36719 6.25C5.74219 4.39062 6.39062 2.8125 7.21094 1.70703C4.94922 2.46484 3.10156 4.12109 2.09375 6.25H5.36328H5.36719ZM1.61719 7.5C1.38281 8.29297 1.25391 9.13281 1.25391 10C1.25391 10.8672 1.37891 11.707 1.61719 12.5H5.15625C5.05469 11.6992 5 10.8633 5 10C5 9.13672 5.05469 8.30078 5.15625 7.5H1.61328H1.61719ZM12.793 18.293C15.0508 17.5312 16.8945 15.8789 17.9062 13.75H14.6367C14.2617 15.6094 13.6133 17.1875 12.793 18.293ZM7.20703 18.293C6.38672 17.1875 5.74219 15.6055 5.36328 13.75H2.09375C3.10547 15.8789 4.94922 17.5352 7.20703 18.293ZM10 20C7.34784 20 4.8043 18.9464 2.92893 17.0711C1.05357 15.1957 0 12.6522 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0C12.6522 0 15.1957 1.05357 17.0711 2.92893C18.9464 4.8043 20 7.34784 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20Z"
-                  fill="#4B4B4B"></path>
-              </svg>
-              <span class="text-header">English</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="s-ion-icon" style="position: relative; top: 2px; cursor: pointer;">
-                <path d="M5 7L10 12L15 7" stroke="#4B4B4B" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </div>
-          <div class="dropdown-content" id="languageDropdown">
-            <div class="card-2">
-              <a href="#" data-target="en">English</a>
-              <a href="#" data-target="es">Spanish</a>
-            </div>
-          </div>
-        </div>
-      </div>
   </div>
 
   <div class="card">
+    <p class="forgotpassword">Forgot Your Password?</p>
+    <p class="registeredemail">
+      Don't worry, it happens!<br />Please enter registered email.
+    </p>
+
     <div id="newPasswordIcon">
       <svg id="showNewPasswordIcon" xmlns="http://www.w3.org/2000/svg" width="23" height="19" viewBox="0 0 24 24"
         fill="none">
@@ -556,94 +491,31 @@
       <div class="heading">
         <h1 role="heading">User Details</h1>
       </div>
-      <div class="buttons">
-      </div>
-      <div class="intro">
-        <p>Please provide the following details.</p>
-      </div>
-      <form id="attributeVerification" action="JavaScript:void(0);">
-        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password
-          entry fields do not match. Please enter the same password in both fields and try again.</div>
-        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required
-          field is missing. Please fill out all required fields and try again.</div>
-        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields
-          are filled out incorrectly. Please check your entries and try again.</div>
+    <div class="buttons">
+    </div>
+    <div class="intro">
+      <p>Please provide the following details.</p>
+    </div>
+    <form id="attributeVerification" action="JavaScript:void(0);">
+        <div id="passwordEntryMismatch" class="error pageLevel" style="display: none;" aria-hidden="true">The password entry fields do not match. Please enter the same password in both fields and try again.</div>
+        <div id="requiredFieldMissing" class="error pageLevel" style="display: none;" aria-hidden="true">A required field is missing. Please fill out all required fields and try again.</div>
+        <div id="fieldIncorrect" class="error pageLevel" style="display: none;" aria-hidden="true">One or more fields are filled out incorrectly. Please check your entries and try again.</div>
         <div id="claimVerificationServerError" class="error pageLevel" style="display: none;" aria-hidden="true"></div>
         <div id="attributeList" class="attr">
-          <ul>
-            <li class="VerificationControl emailVerificationControl_li">
-              <div class="attrEntry">
-                <label id="emailVerificationControl_label" for="emailVerificationControl"></label>
-                <div class="error itemLevel" role="alert"></div>
-                <div class="verificationControlContent" id="emailVerificationControl">
-                  <div class="verificationInfoText">
-                    <div id="emailVerificationControl_info_message" aria-hidden="true" role="alert"
-                      aria-label="Verification is necessary. Please click Send button." style="display: none;">
-                      Verification is necessary. Please click Send button.</div>
-                  </div>
-                  <div class="verificationSuccessText">
-                    <div id="emailVerificationControl_success_message" aria-hidden="false" role="alert"
-                      aria-label="The code has been verified. You can now continue." style="display: inline;">The code
-                      has been verified. You can now continue.</div>
-                  </div>
-                  <div class="verificationErrorText error">
-                    <div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label=""
-                      style="display: none;"></div>
-                  </div>
-                  <ul>
-                    <li class="TextBox email_li email" aria-hidden="false" style="display: inline;">
-                      <div class="attrEntry"><label id="email_label" for="email" style="display: none;">Email
-                          Address</label>
-                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input
-                          id="email" class="textInput" type="text" placeholder="Email Address"
-                          aria-label="Email Address"
-                          pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$"
-                          title="Email address that can be used to contact you." aria-required="true"
-                          autofocus="autofocus" style="display: none;" disabled=""><a class="helpLink tiny"
-                          href="javascript:void(0)" data-help="Email address that can be used to contact you.">What is
-                          this?</a>
-                      </div>
-                    </li>
-                    <li class="TextBox VerificationCode_li VerificationCode" aria-hidden="true" style="display: none;">
-                      <div class="attrEntry"><label id="VerificationCode_label" for="VerificationCode">Verification
-                          Code</label>
-                        <div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input
-                          id="VerificationCode" class="textInput" type="text" placeholder="Verification Code"
-                          aria-label="Verification Code" title="Enter your email verification code" aria-required="true"
-                          autocomplete="off" disabled="">
-                        <p id="codeExpireText">This code will expire in 10 minutes.</p><a class="helpLink tiny"
-                          href="javascript:void(0)" data-help="Enter your email verification code">What is this?</a>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="working" style="display: none;" aria-hidden="true"></div>
-                  <div class="buttons"><button class="sendCode" id="emailVerificationControl_but_send_code"
-                      type="button" aria-label="Send verification code" aria-hidden="true" style="display: none;">Send
-                      verification code</button><button class="verifyCode" id="emailVerificationControl_but_verify_code"
-                      type="button" aria-label="Verify code" aria-hidden="true"
-                      style="display: none;">VERIFY</button><span id="codeNotReceivedText" style="display: none;">Code
-                      Not Received?</span><button class="sendNewCode" id="emailVerificationControl_but_send_new_code"
-                      type="button" aria-label="Send new code" aria-hidden="true"
-                      style="display: none;">Resend</button><button class="changeClaims"
-                      id="emailVerificationControl_but_change_claims" type="button" aria-label="Change Email Address"
-                      aria-hidden="false" style="display: none;">Change</button></div>
-                </div><a class="helpLink tiny" href="javascript:void(0)">What is this?</a>
-              </div>
-            </li>
-          </ul>
+            <ul>
+                <li class="VerificationControl emailVerificationControl_li"><div class="attrEntry"><label id="emailVerificationControl_label" for="emailVerificationControl"></label><div class="error itemLevel" role="alert"></div><div class="verificationControlContent" id="emailVerificationControl"><div class="verificationInfoText"><div id="emailVerificationControl_info_message" aria-hidden="true" role="alert" aria-label="Verification is necessary. Please click Send button." style="display: none;">Verification is necessary. Please click Send button.</div></div><div class="verificationSuccessText"><div id="emailVerificationControl_success_message" aria-hidden="false" role="alert" aria-label="The code has been verified. You can now continue." style="display: inline;">The code has been verified. You can now continue.</div></div><div class="verificationErrorText error"><div id="emailVerificationControl_error_message" aria-hidden="true" role="alert" aria-label="" style="display: none;"></div></div><ul><li class="TextBox email_li email" aria-hidden="false" style="display: inline;"><div class="attrEntry"><label id="email_label" for="email" style="display: none;">Email Address</label><div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input id="email" class="textInput" type="text" placeholder="Email Address" aria-label="Email Address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" title="Email address that can be used to contact you." aria-required="true" autofocus="autofocus" style="display: none;" disabled=""><a class="helpLink tiny" href="javascript:void(0)" data-help="Email address that can be used to contact you.">What is this?</a></div></li><li class="TextBox VerificationCode_li VerificationCode" aria-hidden="true" style="display: none;"><div class="attrEntry"><label id="VerificationCode_label" for="VerificationCode">Verification Code</label><div class="error itemLevel" role="alert" aria-hidden="true" aria-label=""></div><input id="VerificationCode" class="textInput" type="text" placeholder="Verification Code" aria-label="Verification Code" title="Enter your email verification code" aria-required="true" autocomplete="off" disabled=""><p id="codeExpireText">This code will expire in 10 minutes.</p><a class="helpLink tiny" href="javascript:void(0)" data-help="Enter your email verification code">What is this?</a></div></li></ul><div class="working" style="display: none;" aria-hidden="true"></div><div class="buttons"><button class="sendCode" id="emailVerificationControl_but_send_code" type="button" aria-label="Send verification code" aria-hidden="true" style="display: none;">Send verification code</button><button class="verifyCode" id="emailVerificationControl_but_verify_code" type="button" aria-label="Verify code" aria-hidden="true" style="display: none;">VERIFY</button><span id="codeNotReceivedText" style="display: none;">Code Not Received?</span><button class="sendNewCode" id="emailVerificationControl_but_send_new_code" type="button" aria-label="Send new code" aria-hidden="true" style="display: none;">Resend</button><button class="changeClaims" id="emailVerificationControl_but_change_claims" type="button" aria-label="Change Email Address" aria-hidden="false" style="display: none;">Change</button></div></div><a class="helpLink tiny" href="javascript:void(0)">What is this?</a></div></li>
+            </ul>
         </div>
         <div class="buttons">
-          <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue"
-            style="display: unset;">Continue</button><button id="cancel" aria-label="Cancel"
-            formnovalidate="">Cancel</button>
+            <button id="continue" type="submit" form="attributeVerification" aria-disabled="false" aria-label="Continue" style="display: unset;">Continue</button><button id="cancel" aria-label="Cancel" formnovalidate="">Cancel</button>
         </div>
 
         <div class="verifying-modal">
-          <div id="verifying_blurb"></div>
+            <div id="verifying_blurb"></div>
         </div>
-      </form>
-
-    </div>
+    </form>
+    
+  </div>
     <div>
       <h1 class="custom-letter-spacing">TELEMEDICINE SIMPLIFIED</h1>
     </div>
@@ -663,6 +535,15 @@
     }
 
     (() => {
+      const submitBtnEle = document.getElementById("next");
+      if (submitBtnEle && submitBtnEle != undefined) {
+        submitBtnEle.textContent = "LOG IN";
+      }
+
+      const forgotPasswordEle = document.getElementById("forgotPassword");
+      if (forgotPasswordEle && forgotPasswordEle != undefined) {
+        forgotPasswordEle.textContent = "Forgot password?";
+      }
 
       let emailShowInterval = setInterval(() => {
         if (
@@ -717,10 +598,10 @@
             continueBtnEle.style.display = "unset";
 
             const registeredemail = document.getElementsByClassName(
-              "registeredemail"
-            )[0];
-            registeredemail.style.display = "block";
-            registeredemail.textContent = "Email verified successfully!";
+            "registeredemail"
+          )[0];
+          registeredemail.style.display = "block";
+          registeredemail.textContent = "Email verified successfully!";
 
             const changeClaimsInterval = setInterval(() => {
               if (!isElementWithClassDisplayNone("changeClaims")) {
@@ -757,73 +638,26 @@
           continueBtnEle.textContent = "RESET PASSWORD";
 
           const passwordInstrunctionEle = document.createElement("ul");
-          passwordInstrunctionEle.id = "passswordInstruction";
-          passwordInstrunctionEle.innerHTML = `
+            passwordInstrunctionEle.id = "passswordInstruction";
+            passwordInstrunctionEle.innerHTML = `
                 <li>Must be at least 8 characters</li>
                 <li>Must contain uppercase and lowercase letters</li>
                 <li>Must contain at least one number</li>
                 <li>Must contain at least one symbol</li>
             `;
-          const newPasswordEle = document.querySelector("#newPassword");
-          newPasswordEle.insertAdjacentElement(
-            "afterend",
-            passwordInstrunctionEle
-          );
+            const newPasswordEle = document.querySelector("#newPassword");
+            newPasswordEle.insertAdjacentElement(
+              "afterend",
+              passwordInstrunctionEle
+            );
 
-          const newPasswordIconEle = document.getElementById('newPasswordIcon');
-          newPasswordIconEle.style.display = 'unset';
-          const confirmPasswordIconEle = document.getElementById('confirmPasswordIcon');
-          confirmPasswordIconEle.style.display = 'unset';
+            const newPasswordIconEle = document.getElementById('newPasswordIcon');
+            newPasswordIconEle.style.display = 'unset';
+            const confirmPasswordIconEle = document.getElementById('confirmPasswordIcon');
+            confirmPasswordIconEle.style.display = 'unset';
           clearInterval(resetPasswordInterval);
         }
       });
-      var icon = document.querySelector(".icon-inner");
-        var text = document.querySelector(".text-header");
-        var dropdownContent = document.getElementById("languageDropdown");
-
-        icon.addEventListener("click", function (event) {
-          event.stopPropagation();
-          dropdownContent.classList.toggle("show");
-        });
-
-        text.addEventListener("click", function (event) {
-          event.stopPropagation();
-          dropdownContent.classList.toggle("show");
-        });
-
-        document.addEventListener("click", function (event) {
-          if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
-            dropdownContent.classList.remove('show');
-          }
-        });
-        const dropdownContentAnchor = document.querySelector('.dropdown-content');
-
-        dropdownContentAnchor.addEventListener('click', function(event) {
-        if (event.target.tagName === 'A') {
-          event.preventDefault();
-          const languageData = event.target.getAttribute('data-target');
-          
-          // Set the ui_locales parameter
-          const url = new URL(window.location.href);
-          url.searchParams.set('ui_locales', languageData);
-
-          // Reload the page with the new parameter
-          window.location.href = url.href;
-        }
-      });
-        const urlParams = new URLSearchParams(window.location.search);
-         const currentLanguage = urlParams.get('ui_locales') || 'en';
-         document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
-
-        // Update the active class in the dropdown
-        document.querySelectorAll('.dropdown-content a').forEach(anchor => {
-          if (anchor.getAttribute('data-target').includes(currentLanguage)) {
-            anchor.classList.add('active');
-          } else {
-            anchor.classList.remove('active');
-          }
-        });
-      
     })();
 
     (async () => {
@@ -847,25 +681,25 @@
     })();
 
     (() => {
-      const enablePasswordVisibility = (showPasswordIconId, hidePasswordIconId, passwordId) => {
+      const enablePasswordVisibility = (showPasswordIconId,hidePasswordIconId,passwordId) =>{
         var showIcon = document.getElementById(showPasswordIconId);
         var hideIcon = document.getElementById(hidePasswordIconId);
         var passwordInput = document.getElementById(passwordId);
-
+  
         hideIcon.addEventListener("click", function () {
           passwordInput.type = "password";
           hideIcon.style.display = "none";
           showIcon.style.display = "block";
         });
-
+  
         showIcon.addEventListener("click", function () {
           passwordInput.type = "text";
           showIcon.style.display = "none";
           hideIcon.style.display = "block";
         });
       }
-      enablePasswordVisibility('showNewPasswordIcon', 'hideNewPasswordIcon', 'newPassword');
-      enablePasswordVisibility('showConfirmPasswordIcon', 'hideConfirmPasswordIcon', 'reenterPassword');
+      enablePasswordVisibility('showNewPasswordIcon','hideNewPasswordIcon','newPassword');
+      enablePasswordVisibility('showConfirmPasswordIcon','hideConfirmPasswordIcon','reenterPassword');
     })();
   </script>
 </body>
