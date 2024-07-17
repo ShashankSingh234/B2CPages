@@ -343,7 +343,7 @@
       }
     }
 
-    #client-logo {
+    #client-logo,#verifyAccount {
       display: none;
     }
 
@@ -447,6 +447,56 @@
 
 
     <div id="api" data-name="Unified" role="main" style="padding: 10px;">
+        <form id="localAccountForm" action="JavaScript:void(0);" class="localAccount" aria-label="">
+          <div class="intro">
+            <h2 aria-level="1">
+              
+            </h2>
+          </div>
+          <div class="error pageLevel" aria-hidden="true" role="alert" style="display: none;">
+            <p></p>
+          </div>
+          <div class="entry">
+            <div class="entry-item">
+              <label for="signInName">
+                Username
+              </label>
+              <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none;">
+                <p></p>
+              </div>
+              <input type="text" id="signInName" name="Username" title="Please enter a valid Username" autofocus="" placeholder="Username" aria-label="Username">
+            </div>
+              <div class="entry-item">
+                <div class="password-label">
+                  <label for="password">Password</label>
+                      <a id="forgotPassword" href="/7b65787e-43c0-4b7e-9b92-f3871cf396ad/B2C_1A_signup_signin_Client/api/CombinedSigninAndSignup/unified?claimsexchange=ForgotPasswordExchange&amp;csrf_token=RUpCQzNWU1BZQit6akF5amtsZDRSWG9kSFhZZldTZnN1T1B1ODR1YlhnTDZ3ekRxTkxER2xZU2ZqMHZ5Ymo3OVJTVm5SOXlCT2twWWd5Rnk5UlYxQkE9PTsyMDI0LTA3LTE3VDA3OjMwOjExLjU4NjAyNDVaO1hGWWZFcHNXZHJRUXAwRzU0c3YwWlE9PTt7Ik9yY2hlc3RyYXRpb25TdGVwIjoxfQ==&amp;tx=StateProperties=eyJUSUQiOiJhZTAwYmIxZS05NDAzLTRiYzctOTZmYi0xYTYzMDY0ZGJkODcifQ&amp;p=B2C_1A_signup_signin_Client">Forgot password?</a>
+                                </div>
+                <div class="error itemLevel" aria-hidden="true" style="display: none;">
+                  <p role="alert"></p>
+                </div>
+                <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
+                            </div>
+            <div class="working"></div>
+                <div class="rememberMe">
+                  <input id="rememberMe" type="checkbox" name="rememberMe">
+                  <label for="rememberMe">Remember Username</label>
+                </div>
+
+
+            <div class="buttons">
+              <button id="next" type="submit" form="localAccountForm">LOG IN</button>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    <div id="verifyAccount">
+      <p style="text-align: center;padding-top: 20px;font-size: 16px;font-weight: 400;color: #4B4B4B;">Already a member,
+        but you need to complete registration?
+      </p>
+      <p class="verifyAccount">
+        <a href="#" style="color: #003057;">Verify Your Account</a>
+      </p>
     </div>
 
     <div>
@@ -541,6 +591,9 @@
             const { logo } = client;
             clientLogoEle.style.display = 'unset';
             clientLogoEle.src = logo;
+
+            const verifyAccountEle = document.getElementById('verifyAccount');
+            verifyAccountEle.style.display = 'unset';
           }
         }
       }
