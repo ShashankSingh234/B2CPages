@@ -569,9 +569,12 @@
          const currentLanguage = urlParams.get('ui_locales') || 'en';
          document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
 
-         const forgotPasswordEle = document.getElementById("forgotPassword");
-         const forgotPasswordHref = forgotPasswordEle.getAttribute("href");
-         forgotPasswordEle.href = forgotPasswordHref + '&ui_locales=' + currentLanguage;
+         setTimeout(() => {
+          const forgotPasswordEle = document.getElementById("forgotPassword");
+          const forgotPasswordHref = forgotPasswordEle.getAttribute("href");
+          forgotPasswordEle.href = forgotPasswordHref + '&ui_locales=' + currentLanguage;
+          console.log(forgotPasswordEle.getAttribute("href"));
+         }, 1000);
 
         // Update the active class in the dropdown
         document.querySelectorAll('.dropdown-content a').forEach(anchor => {
