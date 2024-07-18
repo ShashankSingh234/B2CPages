@@ -667,9 +667,6 @@
           document.querySelector('input[type="password"]') &&
           isElementWithClassDisplayNone("reenterPassword_li") == false
         ) {
-          const forgotpasswordEle =
-            document.getElementsByClassName("forgotpassword");
-          // forgotpasswordEle[0].textContent = "Reset Password";
           const registeredemailEle =
             document.getElementsByClassName("registeredemail");
           registeredemailEle[0].style.display = "none";
@@ -678,6 +675,9 @@
           continueBtnEle.style.display = "unset";
           continueBtnEle.style.marginTop = "unset";
           // continueBtnEle.textContent = "RESET PASSWORD";
+          const forgotpasswordEle =
+            document.getElementsByClassName("forgotpassword");
+          forgotpasswordEle[0].textContent = continueBtnEle.textContent;
 
           const passwordInstrunctionEle = document.createElement("ul");
             passwordInstrunctionEle.id = "passswordInstruction";
