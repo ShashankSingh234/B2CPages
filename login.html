@@ -491,11 +491,11 @@
     </div>
 
     <div id="verifyAccount">
-      <p style="text-align: center;padding-top: 20px;font-size: 16px;font-weight: 400;color: #4B4B4B;">Already a member,
+      <p id="verifyAccountLabel" style="text-align: center;padding-top: 20px;font-size: 16px;font-weight: 400;color: #4B4B4B;">Already a member,
         but you need to complete registration?
       </p>
       <p class="verifyAccount">
-        <a href="#" style="color: #003057;">Verify Your Account</a>
+        <a id="verifyAccountAnchor" href="#" style="color: #003057;">Verify Your Account</a>
       </p>
     </div>
 
@@ -506,8 +506,7 @@
   </div>
 
   <footer>
-    <p class="footer-para">@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | <span
-        class="mobile-number">855-335-2255</span></p>
+    <p id="footerContent" class="footer-para">@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | 855-335-2255</p>
 
   </footer>
 
@@ -583,6 +582,32 @@
             anchor.classList.remove('active');
           }
         });
+
+        const translations = [
+          {
+            type:'verifyAccountLabel',
+            en: 'Already a member, but you need to complete registration?',
+            es: '¿Ya eres miembro, pero necesitas completar el registro?'
+          },
+          {
+            type:'verifyAccountAnchor',
+            en: 'Verify Your Account',
+            es: 'Verifica tu cuenta'
+          },
+          {
+            type:'footerContent',
+            en: '@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | 855-335-2255',
+            es: '@2024 DialCare, LLC. Reservados todos los derechos. Política de privacidad | Términos y condiciones | 855-335-2255'
+          }
+         ];
+
+         const verifyAccountLabelEle = document.getElementById('verifyAccountLabel');
+         const verifyAccountAnchorEle = document.getElementById('verifyAccountAnchor');
+         const footerContentEle = document.getElementById('footerContent');
+
+         verifyAccountAnchorEle.textContent = translations.find(translation => translation.type == 'verifyAccountLabel')[currentLanguage];
+         verifyAccountAnchorEle.textContent = translations.find(translation => translation.type == 'verifyAccountAnchor')[currentLanguage];
+         footerContentEle.textContent = translations.find(translation => translation.type == 'footerContent')[currentLanguage];
       
     })();
 

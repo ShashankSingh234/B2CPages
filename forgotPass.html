@@ -582,9 +582,9 @@
   </div>
 
   <footer>
-    <p class="footer-para">
+    <p id="footerContent" class="footer-para">
       @2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and
-      Conditions | <span class="mobile-number">855-335-2255</span>
+      Conditions | 855-335-2255
     </p>
   </footer>
 
@@ -643,6 +643,16 @@
           anchor.classList.remove('active');
         }
       });
+
+      const translations = [
+          {
+            type:'footerContent',
+            en: '@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | 855-335-2255',
+            es: '@2024 DialCare, LLC. Reservados todos los derechos. Política de privacidad | Términos y condiciones | 855-335-2255'
+          }
+         ];
+         const footerContentEle = document.getElementById('footerContent');
+         footerContentEle.textContent = translations.find(translation => translation.type == 'footerContent')[currentLanguage];
 
       const submitBtnEle = document.getElementById("next");
       if (submitBtnEle && submitBtnEle != undefined) {
