@@ -650,10 +650,17 @@
             type:'footerContent',
             en: '@2024 DialCare, LLC. All rights reserved. Privacy Policy | Terms and Conditions | 855-335-2255',
             es: '@2024 DialCare, LLC. Reservados todos los derechos. Política de privacidad | Términos y condiciones | 855-335-2255'
+          },
+          {
+            type:'codeExpireText',
+            en: 'This code will expire in 10 minutes.',
+            es: 'Este código caducará en 10 minutos.'
           }
          ];
          const footerContentEle = document.getElementById('footerContent');
+         const codeExpireTextEle = document.getElementById('codeExpireText');
          footerContentEle.textContent = translations.find(translation => translation.type == 'footerContent')[currentLanguage];
+         codeExpireTextEle.textContent = translations.find(translation => translation.type == 'codeExpireText')[currentLanguage];
 
       const submitBtnEle = document.getElementById("next");
       if (submitBtnEle && submitBtnEle != undefined) {
@@ -680,14 +687,14 @@
           forgotpasswordLabelEle.style.display = "none";
           registeredemailLabelEle.style.display = "none";
           let codeNotReceivedText = document.createElement("span");
-          codeNotReceivedText.textContent = "Code Not Received?";
+          // codeNotReceivedText.textContent = "Code Not Received?";
           codeNotReceivedText.id = "codeNotReceivedText";
           const emailVerificationControl_but_send_new_code_ele =
             document.getElementById(
               "emailVerificationControl_but_send_new_code"
             );
-          emailVerificationControl_but_send_new_code_ele.textContent =
-            "Resend";
+          // emailVerificationControl_but_send_new_code_ele.textContent =
+          //   "Resend";
           emailVerificationControl_but_send_new_code_ele.parentNode.insertBefore(
             codeNotReceivedText,
             emailVerificationControl_but_send_new_code_ele
@@ -708,7 +715,7 @@
             document.getElementById(
               "emailVerificationControl_but_verify_code"
             );
-          emailVerificationControl_but_verify_code_ele.textContent = "VERIFY";
+          // emailVerificationControl_but_verify_code_ele.textContent = "VERIFY";
           emailVerificationControl_but_verify_code_ele.addEventListener(
             "click",
             hideCodeNotReceivedText
