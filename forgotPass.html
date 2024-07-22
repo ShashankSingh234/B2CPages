@@ -633,7 +633,7 @@
       });
       // Show language as selected 
       const urlParams = new URLSearchParams(window.location.search);
-      const currentLanguage = urlParams.get('ui_locales') || 'en';
+      const currentLanguage = urlParams.get('ui_locales') || SETTINGS.locale.lang;
       document.querySelector('.text-header').textContent = currentLanguage === 'en' ? 'English' : 'Spanish';
 
       // Update the active class in the dropdown
