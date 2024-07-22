@@ -658,9 +658,8 @@
           }
          ];
          const footerContentEle = document.getElementById('footerContent');
-         const codeExpireTextEle = document.getElementById('codeExpireText');
          footerContentEle.textContent = translations.find(translation => translation.type == 'footerContent')[currentLanguage];
-         codeExpireTextEle.textContent = translations.find(translation => translation.type == 'codeExpireText')[currentLanguage];
+         
 
       const submitBtnEle = document.getElementById("next");
       if (submitBtnEle && submitBtnEle != undefined) {
@@ -702,8 +701,7 @@
 
           let codeExpireTextEle = document.createElement("p");
           codeExpireTextEle.id = "codeExpireText";
-          codeExpireTextEle.textContent =
-            "This code will expire in 10 minutes.";
+         codeExpireTextEle.textContent = translations.find(translation => translation.type == 'codeExpireText')[currentLanguage];
           const VerificationCodeEle =
             document.getElementById("VerificationCode");
           VerificationCodeEle.insertAdjacentElement(
