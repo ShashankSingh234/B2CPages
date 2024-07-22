@@ -660,7 +660,32 @@
             type:'codeNotReceivedText',
             en: 'Code Not Received?',
             es: '¿Código no recibido?'
-          }
+          },
+          {
+            type:'registeredemail',
+            en: 'Email verified successfully!',
+            es: '¡Correo electrónico verificado exitosamente!'
+          },
+          {
+            type:'passwordInstruction1',
+            en: 'Must be at least 8 characters',
+            es: 'Debe tener al menos 8 caracteres.'
+          },
+          {
+            type:'passwordInstruction2',
+            en: 'Must contain uppercase and lowercase letters',
+            es: 'Debe contener letras mayúsculas y minúsculas.'
+          },
+          {
+            type:'passwordInstruction3',
+            en: 'Must contain at least one number',
+            es: 'Debe contener al menos un número'
+          },
+          {
+            type:'passwordInstruction4',
+            en: 'Must contain at least one symbol',
+            es: 'Debe contener al menos un símbolo.'
+          },
          ];
          const footerContentEle = document.getElementById('footerContent');
          footerContentEle.textContent = translations.find(translation => translation.type == 'footerContent')[currentLanguage];
@@ -736,7 +761,9 @@
             "registeredemail"
           )[0];
           registeredemail.style.display = "block";
-          registeredemail.textContent = "Email verified successfully!";
+          // registeredemail.textContent = "Email verified successfully!";
+          registeredemail.textContent = translations.find(translation => translation.type == 'registeredemail')[currentLanguage];
+
 
             const changeClaimsInterval = setInterval(() => {
               if (!isElementWithClassDisplayNone("changeClaims")) {
@@ -775,10 +802,10 @@
           const passwordInstrunctionEle = document.createElement("ul");
             passwordInstrunctionEle.id = "passswordInstruction";
             passwordInstrunctionEle.innerHTML = `
-                <li>Must be at least 8 characters</li>
-                <li>Must contain uppercase and lowercase letters</li>
-                <li>Must contain at least one number</li>
-                <li>Must contain at least one symbol</li>
+                <li>${translations.find(translation => translation.type == 'passwordInstruction1')[currentLanguage]}</li>
+                <li>${translations.find(translation => translation.type == 'passwordInstruction2')[currentLanguage]}</li>
+                <li>${translations.find(translation => translation.type == 'passwordInstruction3')[currentLanguage]}</li>
+                <li>${translations.find(translation => translation.type == 'passwordInstruction4')[currentLanguage]}</li>
             `;
             const newPasswordEle = document.querySelector("#newPassword");
             newPasswordEle.insertAdjacentElement(
