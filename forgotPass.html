@@ -655,6 +655,11 @@
             type:'codeExpireText',
             en: 'This code will expire in 10 minutes.',
             es: 'Este código caducará en 10 minutos.'
+          },
+          {
+            type:'codeNotReceivedText',
+            en: 'Code Not Received?',
+            es: '¿Código no recibido?'
           }
          ];
          const footerContentEle = document.getElementById('footerContent');
@@ -687,6 +692,7 @@
           registeredemailLabelEle.style.display = "none";
           let codeNotReceivedText = document.createElement("span");
           // codeNotReceivedText.textContent = "Code Not Received?";
+          codeNotReceivedText.textContent = translations.find(translation => translation.type == 'codeNotReceivedText')[currentLanguage];
           codeNotReceivedText.id = "codeNotReceivedText";
           const emailVerificationControl_but_send_new_code_ele =
             document.getElementById(
