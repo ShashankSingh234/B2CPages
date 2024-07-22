@@ -537,12 +537,12 @@
 
         icon.addEventListener("click", function (event) {
           event.stopPropagation();
-          // dropdownContent.classList.toggle("show");
+          dropdownContent.classList.toggle("show");
         });
 
         text.addEventListener("click", function (event) {
           event.stopPropagation();
-          // dropdownContent.classList.toggle("show");
+          dropdownContent.classList.toggle("show");
         });
 
         document.addEventListener("click", function (event) {
@@ -573,7 +573,6 @@
           const forgotPasswordEle = document.getElementById("forgotPassword");
           const forgotPasswordHref = forgotPasswordEle.getAttribute("href");
           forgotPasswordEle.href = forgotPasswordHref + '&ui_locales=' + currentLanguage;
-          console.log(forgotPasswordEle.getAttribute("href"));
          }, 1000);
 
         // Update the active class in the dropdown
