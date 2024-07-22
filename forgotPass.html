@@ -440,6 +440,37 @@
         display: none;
       }
     }
+
+    #language {
+      border-radius: 5px;
+      height: 60%;
+      margin-left: 10px;
+      padding: 5px;
+    }
+
+    .language {
+      margin: 4px;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      .icon-inner {
+        position: relative;
+
+        bottom: 31px;
+        right: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .text-header {
+        display: none;
+        /* Hide English text on mobile screens */
+      }
+    }
+    .language a.active {
+      background-color: #003057;color: white;margin-bottom: 7px;
+    }
     
   </style>
 </head>
@@ -564,6 +595,41 @@
     }
 
     (() => {
+
+      var icon = document.querySelector(".icon-inner");
+      var text = document.querySelector(".text-header");
+      var dropdownContent = document.getElementById("languageDropdown");
+
+      icon.addEventListener("click", function (event) {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+      });
+
+      text.addEventListener("click", function (event) {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.matches('.icon-inner') && !event.target.matches('.text-header')) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+      const dropdownContentAnchor = document.querySelector('.dropdown-content');
+
+      dropdownContentAnchor.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+          event.preventDefault();
+          const languageData = event.target.getAttribute('data-target');
+
+          // Set the ui_locales parameter
+          const url = new URL(window.location.href);
+          url.searchParams.set('ui_locales', languageData);
+
+          // Reload the page with the new parameter
+          window.location.href = url.href;
+        }
+      });
       // Show language as selected 
       const urlParams = new URLSearchParams(window.location.search);
       const currentLanguage = urlParams.get('ui_locales') || 'en';
