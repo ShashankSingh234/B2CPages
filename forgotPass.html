@@ -678,8 +678,10 @@
 
       const forgotpasswordLabelEle = document.getElementsByClassName("forgotpassword")[0];
       const registeredemailLabelEle = document.getElementsByClassName("registeredemail")[0];
-      forgotpasswordLabelEle.textContent = CONTENT != undefined ? CONTENT.heading : '';
-      registeredemailLabelEle.textContent = CONTENT != undefined ? CONTENT.initial_intro : '';
+      const headingLabelEle = document.querySelector('.heading h1');
+      const introLabelEle = document.querySelector('.intro p');
+      forgotpasswordLabelEle.textContent = headingLabelEle != undefined ? headingLabelEle.textContent : '';
+      registeredemailLabelEle.textContent = introLabelEle != undefined ? introLabelEle.initial_intro : '';
 
       let emailShowInterval = setInterval(() => {
         if (
